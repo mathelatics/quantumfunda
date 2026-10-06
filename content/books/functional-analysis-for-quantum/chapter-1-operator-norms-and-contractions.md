@@ -20,7 +20,7 @@ Then $T$ has a unique fixed point $x^*$ ($T(x^*) = x^*$), and Picard iteration $
 
 $$d(x_n, x^*) \le \frac{q^n}{1 - q}\, d(x_1, x_0)$$
 
-Applied to a quantum channel $\mathcal{E}$ (a completely positive trace-preserving map) iterated on the Banach space of trace-class operators, this argument yields convergence to a fixed-point density operator—the steady state of open quantum dynamics. ok
+Applied to a quantum channel $\mathcal{E}$ (a completely positive trace-preserving map) iterated on the Banach space of trace-class operators, this argument yields convergence to a fixed-point density operator—the steady state of open quantum dynamics.
 
 ```lean
 structure ContractionOn (X : Type) (d : X → X → Float) where
