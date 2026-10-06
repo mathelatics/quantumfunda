@@ -1,13 +1,13 @@
 name = 'MathCode'
 license = 'MIT'
 licenselink = 'https://mathcode.org'
-description = 'Dark Academic & Formal Proof Studio theme for Math Code Center (Pure & Applied Mathematics, Lean 4 Proofs, and Scientific Computing).'
+description = 'Quantum mathematics studio theme for Quantum Funda (Foundations of Quantum Computing, Quantum Computation, Quantum Algorithms, and Quantum Optimization).'
 homepage = 'https://mathcode.org'
 demosite = 'https://mathcode.org'
-tags = ['mathematics', 'lean4', 'formal-proofs', 'scientific-computing', 'katex', 'static-site']
+tags = ['quantum-computing', 'mathematics', 'lean4', 'quantum-algorithms', 'katex', 'static-site']
 features = ['responsive', 'dark-mode', 'light-mode', 'katex-math', 'lean4-highlighting', 'unified-library']
 min_version = '0.146.0'
 
 [author]
-  name = 'Math Code Center'
+  name = 'Quantum Funda'
   homepage = 'https://mathcode.org'

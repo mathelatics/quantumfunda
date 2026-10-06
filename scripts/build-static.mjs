@@ -10,9 +10,9 @@ const CONTENT_DIR = path.join(ROOT, 'content');
 const PUBLIC_DIR = path.join(ROOT, 'public');
 
 const SITE = {
-  title: 'Math Code Center',
+  title: 'Quantum Funda',
   baseURL: 'https://mathcode.org',
-  description: 'A platform for pure and applied mathematics, formal proofs in Lean 4, and scientific computing.'
+  description: 'A platform for the mathematics of quantum computing: mathematical foundations, quantum computation, quantum algorithms, and quantum optimization.'
 };
 
 const LANG_LABELS = {
@@ -306,7 +306,7 @@ function parseQuizQuestions(quizMarkdown) {
 // HTML Shell (Head + Topbar + Global Search Modal + Main + Footer)
 function renderPageShell({ title, description, permalink, section, isHome = false, searchIndexJson = '[]', mainHtml }) {
   const fullTitle = isHome
-    ? `${SITE.title} — Pure & Applied Mathematics, Lean 4 Proofs & Code`
+    ? `${SITE.title} — Quantum Mathematics: Foundations, Computation, Algorithms & Optimization`
     : `${title} | ${SITE.title}`;
   const desc = description || SITE.description;
   const canonicalUrl = `${SITE.baseURL}${permalink}`;
@@ -366,9 +366,9 @@ function renderPageShell({ title, description, permalink, section, isHome = fals
       <button id="sidebarToggleBtn" class="topbar-icon-btn d-none" type="button" aria-label="Toggle Curriculum Drawer" title="Toggle Sidebar">
         <i class="bi bi-layout-sidebar-inset"></i>
       </button>
-      <a href="/" class="brand-link" aria-label="Math Code Center Home">
-        <span class="brand-glyph" aria-hidden="true">&sum;</span>
-        <span class="brand-text">Math Code Center</span>
+      <a href="/" class="brand-link" aria-label="Quantum Funda Home">
+        <span class="brand-glyph" aria-hidden="true">&Psi;</span>
+        <span class="brand-text">Quantum Funda</span>
       </a>
     </div>
 
@@ -429,7 +429,7 @@ function renderPageShell({ title, description, permalink, section, isHome = fals
 
   <footer class="statusbar">
     <span class="statusbar-left"></span>
-    <span class="statusbar-center">&copy; 2026 Math Code Center. Pure &amp; Applied Mathematics &middot; Lean 4 &middot; Scientific Computing.</span>
+    <span class="statusbar-center">&copy; 2026 Quantum Funda. Quantum Foundations &middot; Quantum Computation &middot; Quantum Algorithms &middot; Quantum Optimization.</span>
     <span class="statusbar-right"></span>
   </footer>
 </body>
@@ -460,10 +460,10 @@ function loadContent() {
   const blogDir = path.join(CONTENT_DIR, 'blog');
   const articles = [];
   const defaultArticleCovers = {
-    'welcome-to-mathcode': '/images/article_galois_groups.jpg',
-    'constructive-proofs-in-lean4': '/images/article_curry_howard.jpg',
-    'spectral-graph-theory-and-laplacians': '/images/article_spectral_graph.jpg',
-    'autodiff-and-dual-numbers': '/images/article_symplectic_geometry.jpg'
+    'welcome-to-quantumfunda': '/images/blog_welcome_mathcode.jpg',
+    'formalizing-quantum-theory-in-lean4': '/images/blog_curry_howard_lean4.jpg',
+    'quantum-walks-and-graph-laplacians': '/images/blog_spectral_graph_laplacian.jpg',
+    'parameter-shift-rule-and-variational-gradients': '/images/blog_autodiff_dual_numbers.jpg'
   };
   const fallbackArticleCovers = [
     '/images/article_curry_howard.jpg',
@@ -540,7 +540,7 @@ function loadContent() {
         slug: bookSlug,
         title: params.title || humanizeSlug(bookSlug),
         subtitle: params.subtitle || '',
-        author: params.author || 'Math Code Center Press',
+        author: params.author || 'Quantum Funda Press',
         domain: params.domain || 'Pure Math',
         level: params.level || 'Advanced Undergraduate',
         weight: params.weight || 10,
@@ -656,14 +656,14 @@ function loadContent() {
       allLessons.push(...courseLessons);
 
       const courseDefaultFormulas = {
-        'lean4-formal-proofs': '$$(P \\land Q \\to R) \\iff (P \\to Q \\to R)$$',
-        'pure-mathematics': '$$a^{\\varphi(n)} \\equiv 1 \\pmod n \\;\\cdot\\; A = U \\Sigma V^\\top$$',
-        'applied-scientific-computing': '$$x_{k+1} = x_k - [\\nabla^2 f(x_k)]^{-1}\\nabla f(x_k)$$'
+        'quantum-foundations': '$$|\\psi\\rangle = \\alpha |0\\rangle + \\beta |1\\rangle, \\quad |\\alpha|^2 + |\\beta|^2 = 1$$',
+        'quantum-computation': '$$|\\psi(t)\\rangle = e^{-i\\hat{H}t/\\hbar} |\\psi(0)\\rangle$$',
+        'quantum-optimization': '$$H_C = \\sum_{(u,v)\\in E} \\frac{I - Z_u Z_v}{2}$$'
       };
       const courseDefaultCode = {
-        'lean4-formal-proofs': 'theorem curry_equiv : (P ∧ Q → R) ↔ (P → Q → R)',
-        'pure-mathematics': 'def extended_gcd(a, b) · np.linalg.svd(A)',
-        'applied-scientific-computing': 'newton_raphson_step(x, H, g) · verlet_step(q, p)'
+        'quantum-foundations': 'born_probabilities(psi, projectors) · bloch_vector(rho)',
+        'quantum-computation': 'CNOT @ np.kron(plus, zero) · expm(-1j * H * t)',
+        'quantum-optimization': 'qaoa_cost(gamma, beta) · strang_evolve(HI, HP, T)'
       };
 
       const extractedMathMatch = body.match(/\$\$[\s\S]+?\$\$/) ||
@@ -677,9 +677,9 @@ function loadContent() {
       const signatureCode = params.code_preview || courseDefaultCode[courseSlug] || `${courseSlug.replace(/-/g, '_')} :: Verified Module`;
 
       const defaultCourseCovers = {
-        'lean4-formal-proofs': '/images/course_lean4_proofs.jpg',
-        'pure-mathematics': '/images/course_pure_mathematics.jpg',
-        'applied-scientific-computing': '/images/course_applied_computing.jpg'
+        'quantum-foundations': '/images/course_pure_mathematics.jpg',
+        'quantum-computation': '/images/course_applied_computing.jpg',
+        'quantum-optimization': '/images/course_lean4_proofs.jpg'
       };
       const fallbackCourseCovers = [
         '/images/course_lean4_proofs.jpg',
@@ -1040,10 +1040,10 @@ function buildAll() {
   <div class="studio-container">
     <section class="studio-hero">
       <div class="studio-hero-copy">
-        <div class="studio-eyebrow">PURE &amp; APPLIED MATHEMATICS &middot; FORMAL PROOFS &middot; SCIENTIFIC COMPUTING</div>
-        <h1 class="studio-display-title">Where Formal Mathematical Proof Meets Executable Code.</h1>
+        <div class="studio-eyebrow">QUANTUM COMPUTING MATHEMATICS &middot; QUANTUM FOUNDATIONS &middot; QUANTUM ALGORITHMS &middot; QUANTUM OPTIMIZATION</div>
+        <h1 class="studio-display-title">Where Quantum Theory Meets Rigorous Mathematics.</h1>
         <p class="studio-lead">
-          Math Code Center is an open academic studio uniting rigorous mathematical exposition in LaTeX, constructive theorem proving in <strong>Lean 4</strong>, and scientific computation in <strong>Python</strong>, <strong>C</strong>, and <strong>Rust</strong>.
+          Quantum Funda is an open academic studio for the mathematics of quantum computing: rigorous exposition in LaTeX, formal statement proving in <strong>Lean 4</strong>, and numerical quantum computation in <strong>Python</strong> and <strong>C</strong>.
         </p>
         <div class="studio-cta-row">
           <a href="/library/" class="btn-studio-primary">
@@ -1063,25 +1063,25 @@ function buildAll() {
           <span class="meta-dot">&middot;</span>
           <span>${articles.length} Research Essays</span>
           <span class="meta-dot">&middot;</span>
-          <span>Native LaTeX &amp; Lean 4</span>
+          <span>Native LaTeX &amp; Lean 4 &amp; Quantum Numerics</span>
         </div>
       </div>
 
       <div class="studio-hero-showcase">
         <div class="hero-visual-frame">
-          <img src="/images/hero_math_code_studio.jpg" alt="Geometric manifolds, commutative diagrams, and formal proof trees" class="hero-visual-img">
+          <img src="/images/hero_math_code_studio.jpg" alt="Quantum circuits, Hilbert space geometry, and unitary operator diagrams" class="hero-visual-img">
           <div class="hero-proof-overlay">
             <div class="hero-proof-header">
               <span class="proof-status-indicator"><i class="bi bi-check2-circle"></i> Verified Formalization</span>
               <span class="proof-lang-meta">Lean 4 &middot; Mathlib</span>
             </div>
             <div class="hero-proof-formula">
-              $$\\forall f : \\alpha \\to \\beta,\\; \\text{Injective}(f) \\iff \\forall x_1\\, x_2,\\; f(x_1) = f(x_2) \\implies x_1 = x_2$$
+              $$i\\hbar \\frac{d}{dt} |\\psi(t)\\rangle = \\hat{H}\\, |\\psi(t)\\rangle \\quad\\Longrightarrow\\quad |\\psi(t)\\rangle = e^{-i\\hat{H}t/\\hbar} |\\psi(0)\\rangle$$
             </div>
-            <pre class="hero-proof-code"><code class="language-lean">theorem comp_injective {f : α → β} {g : β → γ}
-    (hf : Injective f) (hg : Injective g) :
-    Injective (g ∘ f) :=
-  fun _ _ h => hf (hg h)</code></pre>
+            <pre class="hero-proof-code"><code class="language-lean">theorem unitary_mul {U V : Matrix (Fin 2) (Fin 2) ℂ}
+    (hU : Uᴴ * U = 1) (hV : Vᴴ * V = 1) :
+    (V * U)ᴴ * (V * U) = 1 := by
+  simp [Matrix.conjTranspose_mul, hU, hV, Matrix.mul_assoc]</code></pre>
           </div>
         </div>
       </div>
@@ -1103,7 +1103,7 @@ function buildAll() {
             <i class="bi bi-collection pillar-icon"></i>
           </div>
           <h3 class="pillar-title">Unified Library</h3>
-          <p class="pillar-desc">Search and filter every course, multi-chapter book, Lean 4 formalization, and mathematical article from a single index.</p>
+          <p class="pillar-desc">Search and filter every course, multi-chapter book, Lean 4 formalization, and quantum mathematics article from a single index.</p>
           <div class="pillar-meta">ALL RESOURCES &middot; INSTANT FILTER</div>
         </a>
 
@@ -1113,7 +1113,7 @@ function buildAll() {
             <i class="bi bi-easel2 pillar-icon"></i>
           </div>
           <h3 class="pillar-title">Interactive Courses</h3>
-          <p class="pillar-desc">Structured lectures, curated readings, multi-language code implementations, and interactive quizzes with step-by-step proof solutions.</p>
+          <p class="pillar-desc">Structured lectures, curated readings, multi-language code implementations, and interactive quizzes with step-by-step quantum mathematics solutions.</p>
           <div class="pillar-meta">${courses.length} TRACKS &middot; ${lessons.length} LESSONS</div>
         </a>
 
@@ -1122,8 +1122,8 @@ function buildAll() {
             <span class="pillar-index">03</span>
             <i class="bi bi-journal-bookmark pillar-icon"></i>
           </div>
-          <h3 class="pillar-title">Mathematical Monographs</h3>
-          <p class="pillar-desc">Self-contained multi-chapter books on Dependent Type Theory, Spectral Linear Algebra, and Functional Analysis.</p>
+          <h3 class="pillar-title">Quantum Monographs</h3>
+          <p class="pillar-desc">Self-contained multi-chapter books on Quantum Linear Algebra, Functional Analysis for Quantum Computing, and Formalizing Quantum Computing in Lean 4.</p>
           <div class="pillar-meta">${books.length} MONOGRAPHS &middot; CHAPTER READER</div>
         </a>
 
@@ -1133,7 +1133,7 @@ function buildAll() {
             <i class="bi bi-pen pillar-icon"></i>
           </div>
           <h3 class="pillar-title">Research Essays &amp; Blog</h3>
-          <p class="pillar-desc">Deep technical expositions on Curry–Howard correspondence, spectral graph theory, automatic differentiation, and PDEs.</p>
+          <p class="pillar-desc">Deep technical expositions on quantum walks and graph Laplacians, the parameter-shift rule for variational circuits, formalizing quantum theory in Lean 4, and amplitude amplification.</p>
           <div class="pillar-meta">${articles.length} ESSAYS &middot; LONG-FORM LATEX</div>
         </a>
       </div>
@@ -1143,7 +1143,7 @@ function buildAll() {
       <div class="section-header-row">
         <div>
           <div class="section-kicker">INTERACTIVE CURRICULUM</div>
-          <h2 class="section-title">Core Mathematics &amp; Code Courses</h2>
+          <h2 class="section-title">Core Quantum Mathematics Courses</h2>
         </div>
         <a href="/courses/" class="section-link">Browse All Courses <i class="bi bi-arrow-right"></i></a>
       </div>
@@ -1177,7 +1177,7 @@ function buildAll() {
       <div class="section-header-row">
         <div>
           <div class="section-kicker">MONOGRAPHS &amp; TEXTBOOKS</div>
-          <h2 class="section-title">Featured Books &amp; Chapter Volumes</h2>
+          <h2 class="section-title">Quantum &amp; Computational Monographs</h2>
         </div>
         <a href="/books/" class="section-link">Browse All Books <i class="bi bi-arrow-right"></i></a>
       </div>
@@ -1210,7 +1210,7 @@ function buildAll() {
       <div class="section-header-row">
         <div>
           <div class="section-kicker">EXPOSITORY RESEARCH</div>
-          <h2 class="section-title">Recent Articles &amp; Mathematical Notes</h2>
+          <h2 class="section-title">Recent Quantum Essays &amp; Technical Notes</h2>
         </div>
         <a href="/blog/" class="section-link">View All Articles <i class="bi bi-arrow-right"></i></a>
       </div>
@@ -1258,15 +1258,15 @@ function buildAll() {
   <div class="studio-container">
     <header class="page-studio-header">
       <div class="studio-eyebrow">UNIFIED INDEX &middot; COURSES, MONOGRAPHS, LESSONS &amp; ARTICLES</div>
-      <h1 class="page-studio-title">Math Code Center Library</h1>
+      <h1 class="page-studio-title">Quantum Funda Library</h1>
       <p class="page-studio-subtitle">
-        Browse, search, and filter all ${totalResources} learning resources across Pure Mathematics, Applied Scientific Computing, and Formal Proofs in Lean 4.
+        Browse, search, and filter all ${totalResources} learning resources across Quantum Foundations, Quantum Computation, Quantum Algorithms, and Quantum Optimization.
       </p>
 
       <div class="library-controls-bar" id="libraryControls">
         <div class="library-search-wrap">
           <i class="bi bi-search library-search-icon"></i>
-          <input type="search" id="librarySearchInput" class="library-search-input" placeholder="Search by theorem, topic, language (Lean 4, Python, C, Spectral, Galois)..." autocomplete="off">
+          <input type="search" id="librarySearchInput" class="library-search-input" placeholder="Search by theorem, topic, language (Lean 4, Python, C, QAOA, Adiabatic)..." autocomplete="off">
         </div>
 
         <div class="library-filter-groups">
@@ -1280,9 +1280,9 @@ function buildAll() {
 
           <div class="filter-segment-group" role="group" aria-label="Filter by mathematical domain">
             <button type="button" class="filter-seg-btn active" data-filter-domain="all">All Domains</button>
-            <button type="button" class="filter-seg-btn" data-filter-domain="Formal Proofs & Lean 4">Lean 4 &amp; Proofs</button>
-            <button type="button" class="filter-seg-btn" data-filter-domain="Pure Math">Pure Math</button>
-            <button type="button" class="filter-seg-btn" data-filter-domain="Applied Math">Applied Math</button>
+            <button type="button" class="filter-seg-btn" data-filter-domain="Quantum Foundations">Quantum Foundations</button>
+            <button type="button" class="filter-seg-btn" data-filter-domain="Quantum Computation">Quantum Computation</button>
+            <button type="button" class="filter-seg-btn" data-filter-domain="Quantum Optimization">Quantum Optimization</button>
           </div>
         </div>
       </div>
@@ -1390,7 +1390,7 @@ function buildAll() {
 
   writePage('library/index.html', renderPageShell({
     title: 'Library',
-    description: 'Unified catalog of courses, mathematical monographs, Lean 4 formalizations, and research articles at Math Code Center.',
+    description: 'Unified catalog of courses, quantum monographs, Lean 4 formalizations, and research articles at Quantum Funda.',
     permalink: '/library/',
     section: 'library',
     searchIndexJson,
@@ -1405,7 +1405,7 @@ function buildAll() {
       <div class="studio-eyebrow">MATHEMATICAL MONOGRAPHS &amp; FORMAL TEXTBOOKS</div>
       <h1 class="page-studio-title">Books &amp; Monographs</h1>
       <p class="page-studio-subtitle">
-        Rigorous, self-contained volumes on dependent type theory in Lean 4, spectral linear algebra, and real &amp; functional analysis—complete with LaTeX proofs and executable code.
+        Rigorous, self-contained volumes on quantum linear algebra, functional analysis for quantum computing, and formalizing quantum theory in Lean 4—complete with LaTeX proofs and executable code.
       </p>
     </header>
 
@@ -1456,7 +1456,7 @@ function buildAll() {
 
   writePage('books/index.html', renderPageShell({
     title: 'Books & Monographs',
-    description: 'Open-access mathematical monographs and code-driven textbooks on Lean 4 theorem proving, linear algebra, analysis, and scientific computing.',
+    description: 'Open-access quantum monographs and code-driven textbooks on quantum linear algebra, quantum algorithms, quantum optimization, and Lean 4 formalization.',
     permalink: '/books/',
     section: 'books',
     searchIndexJson,
@@ -1635,7 +1635,7 @@ function buildAll() {
       <div class="studio-eyebrow">EXPOSITIONS, THEOREMS &amp; FORMALIZATIONS</div>
       <h1 class="page-studio-title">Research Essays &amp; Mathematical Blog</h1>
       <p class="page-studio-subtitle">
-        Long-form technical articles on pure and applied mathematics, constructive proofs in Lean 4, spectral methods, and scientific algorithms.
+        Long-form technical articles on quantum foundations, quantum computation, quantum algorithms, quantum optimization, and formal verification in Lean 4.
       </p>
 
       <div class="library-controls-bar" id="blogFilterBar">
@@ -1645,9 +1645,9 @@ function buildAll() {
         </div>
         <div class="filter-segment-group" role="group" aria-label="Filter blog by domain">
           <button type="button" class="filter-seg-btn active" data-blog-domain="all">All Essays (${articles.length})</button>
-          <button type="button" class="filter-seg-btn" data-blog-domain="Formal Proofs & Lean 4">Lean 4 &amp; Proofs</button>
-          <button type="button" class="filter-seg-btn" data-blog-domain="Pure Math">Pure Math</button>
-          <button type="button" class="filter-seg-btn" data-blog-domain="Applied Math">Applied Math</button>
+          <button type="button" class="filter-seg-btn" data-blog-domain="Quantum Foundations">Foundations</button>
+          <button type="button" class="filter-seg-btn" data-blog-domain="Quantum Computation">Computation &amp; Algorithms</button>
+          <button type="button" class="filter-seg-btn" data-blog-domain="Quantum Optimization">Optimization</button>
         </div>
       </div>
     </header>
@@ -1681,7 +1681,7 @@ function buildAll() {
 
   writePage('blog/index.html', renderPageShell({
     title: 'Research Essays & Blog',
-    description: 'Expository articles on pure and applied mathematics, Lean 4 formal proofs, numerical analysis, and scientific computing.',
+    description: 'Expository articles on the mathematics of quantum computing, quantum foundations, quantum algorithms, and quantum optimization.',
     permalink: '/blog/',
     section: 'blog',
     searchIndexJson,
@@ -1765,19 +1765,19 @@ function buildAll() {
       <div class="studio-eyebrow">STRUCTURED CURRICULUM &middot; LECTURES, FORMAL CODE &amp; QUIZZES</div>
       <h1 class="page-studio-title">Interactive Mathematics &amp; Code Courses</h1>
       <p class="page-studio-subtitle">
-        Rigorous courses combining LaTeX mathematical derivations, constructive proofs in Lean 4, scientific implementations in Python, C, and Rust, and interactive self-check quizzes.
+        Rigorous courses combining quantum mathematical derivations in LaTeX, formal proofs in Lean 4, numerical implementations in Python and C, and interactive self-check quizzes.
       </p>
 
       <div class="library-controls-bar" id="coursesFilterBar">
         <div class="library-search-wrap">
           <i class="bi bi-search library-search-icon"></i>
-          <input type="search" id="coursesSearchInput" class="library-search-input" placeholder="Search courses, modules, theorems, or languages (e.g. Lean 4, Spectral, Symplectic, C)..." autocomplete="off">
+          <input type="search" id="coursesSearchInput" class="library-search-input" placeholder="Search courses, modules, theorems, or languages (e.g. Lean 4, Hilbert, Unitary, C)..." autocomplete="off">
         </div>
         <div class="filter-segment-group" role="group" aria-label="Filter courses by domain">
           <button type="button" class="filter-seg-btn active" data-course-domain="all">All Tracks (${courses.length})</button>
-          <button type="button" class="filter-seg-btn" data-course-domain="Formal Proofs & Lean 4">Lean 4 &amp; Proofs</button>
-          <button type="button" class="filter-seg-btn" data-course-domain="Pure Math">Pure Math</button>
-          <button type="button" class="filter-seg-btn" data-course-domain="Applied Math">Applied Math</button>
+          <button type="button" class="filter-seg-btn" data-course-domain="Quantum Foundations">Foundations</button>
+          <button type="button" class="filter-seg-btn" data-course-domain="Quantum Computation">Computation &amp; Algorithms</button>
+          <button type="button" class="filter-seg-btn" data-course-domain="Quantum Optimization">Optimization</button>
         </div>
       </div>
 
@@ -1823,7 +1823,7 @@ function buildAll() {
 
   writePage('courses/index.html', renderPageShell({
     title: 'Interactive Courses',
-    description: 'Interactive courses on Lean 4 theorem proving, pure mathematics, and applied scientific computing.',
+    description: 'Interactive courses on the mathematical foundations of quantum computing, quantum computation, quantum algorithms, and quantum optimization.',
     permalink: '/courses/',
     section: 'courses',
     searchIndexJson,
@@ -1910,7 +1910,7 @@ function buildAll() {
     });
   }
 
-  console.log(`Built Math Code Center static site in public/: ${courses.length} courses (${lessons.length} lessons), ${books.length} books, ${articles.length} blog essays, and ${searchIndex.length} searchable entries.`);
+  console.log(`Built Quantum Funda static site in public/: ${courses.length} courses (${lessons.length} lessons), ${books.length} books, ${articles.length} blog essays, and ${searchIndex.length} searchable entries.`);
 }
 
 buildAll();

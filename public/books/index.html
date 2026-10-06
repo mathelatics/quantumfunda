@@ -1,278 +1,61 @@
-<!DOCTYPE html>
-<html lang="en-us" data-bs-theme="dark">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Books &amp; Monographs | Math Code Center</title>
-  <meta name="description" content="Open-access mathematical monographs and code-driven textbooks on Lean 4 theorem proving, linear algebra, analysis, and scientific computing.">
-  <meta property="og:title" content="Books &amp; Monographs">
-  <meta property="og:description" content="Open-access mathematical monographs and code-driven textbooks on Lean 4 theorem proving, linear algebra, analysis, and scientific computing.">
-  <meta property="og:image" content="https://mathcode.org/og.png">
-  <meta property="og:url" content="https://mathcode.org/books/">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Math Code Center">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Books &amp; Monographs">
-  <meta name="twitter:description" content="Open-access mathematical monographs and code-driven textbooks on Lean 4 theorem proving, linear algebra, analysis, and scientific computing.">
-  <meta name="twitter:image" content="https://mathcode.org/og.png">
-  <link rel="icon" type="image/png" href="/pc.png">
-  <script>
-    (function() {
-      try {
-        var savedTheme = localStorage.getItem('mathcode-theme') || 'dark';
-        document.documentElement.setAttribute('data-bs-theme', savedTheme);
-      } catch (e) {
-        document.documentElement.setAttribute('data-bs-theme', 'dark');
-      }
-    })();
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=JetBrains+Mono:ital,wght@0,400..700;1,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>
-  window.__APP_CONFIG__ = {
-    mobileBreakpoint: 1279
-  };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-  <link rel="stylesheet" href="/css/main.css">
-  <script src="/js/main.js" defer></script>
-</head>
-<body>
-  <script id="global-search-index" type="application/json">[{"category":"course","typeLabel":"COURSE","title":"Formal Proofs & Type Theory in Lean 4","subtitle":"2 lessons · Intermediate","domain":"Lean 4 & Proofs","url":"/courses/lean4-formal-proofs/"},{"category":"course","typeLabel":"COURSE","title":"Pure Mathematics: Algebra, Analysis & Number Theory","subtitle":"2 lessons · Intermediate","domain":"Pure Mathematics","url":"/courses/pure-mathematics/"},{"category":"course","typeLabel":"COURSE","title":"Applied Mathematics & Scientific Computing","subtitle":"2 lessons · Advanced","domain":"Applied Mathematics","url":"/courses/applied-scientific-computing/"},{"category":"course","typeLabel":"LESSON","title":"Propositions as Types & Curry–Howard","subtitle":"Formal Proofs & Type Theory in Lean 4 (Foundations)","domain":"Lean 4 & Proofs","url":"/courses/lean4-formal-proofs/foundations/propositions-as-types/"},{"category":"course","typeLabel":"LESSON","title":"Structural Induction & Algebraic Monoids","subtitle":"Formal Proofs & Type Theory in Lean 4 (Foundations)","domain":"Lean 4 & Proofs","url":"/courses/lean4-formal-proofs/foundations/induction-and-algebraic-structures/"},{"category":"course","typeLabel":"LESSON","title":"Modular Arithmetic & Euler Totient Theorem","subtitle":"Pure Mathematics: Algebra, Analysis & Number Theory (Number Theory)","domain":"Pure Mathematics","url":"/courses/pure-mathematics/number-theory/modular-arithmetic-and-fermat/"},{"category":"course","typeLabel":"LESSON","title":"The Spectral Theorem & Singular Value Decomposition","subtitle":"Pure Mathematics: Algebra, Analysis & Number Theory (Linear Algebra)","domain":"Pure Mathematics","url":"/courses/pure-mathematics/linear-algebra/svd-and-spectral-theorem/"},{"category":"course","typeLabel":"LESSON","title":"Newton–Raphson Convergence & Convex Optimization","subtitle":"Applied Mathematics & Scientific Computing (Numerical Analysis)","domain":"Applied Mathematics","url":"/courses/applied-scientific-computing/numerical-analysis/newton-krylov-and-optimization/"},{"category":"course","typeLabel":"LESSON","title":"Symplectic Integrators & Hamiltonian Mechanics","subtitle":"Applied Mathematics & Scientific Computing (Differential Equations)","domain":"Applied Mathematics","url":"/courses/applied-scientific-computing/differential-equations/symplectic-integrators-and-ode/"},{"category":"book","typeLabel":"BOOK","title":"Theorem Proving & Formal Mathematics in Lean 4","subtitle":"3 chapters · Intermediate to Advanced","domain":"Lean 4 & Proofs","url":"/books/theorem-proving-in-lean4/"},{"category":"book","typeLabel":"CH. 1","title":"Chapter 1: Dependent Type Theory & Universes","subtitle":"Theorem Proving & Formal Mathematics in Lean 4","domain":"Lean 4 & Proofs","url":"/books/theorem-proving-in-lean4/chapter-1-dependent-type-theory/"},{"category":"book","typeLabel":"CH. 2","title":"Chapter 2: Equational Reasoning, Induction & Tactics","subtitle":"Theorem Proving & Formal Mathematics in Lean 4","domain":"Lean 4 & Proofs","url":"/books/theorem-proving-in-lean4/chapter-2-tactics-and-equality/"},{"category":"book","typeLabel":"CH. 3","title":"Chapter 3: Typeclasses, Rings & Mathlib Hierarchies","subtitle":"Theorem Proving & Formal Mathematics in Lean 4","domain":"Lean 4 & Proofs","url":"/books/theorem-proving-in-lean4/chapter-3-algebraic-hierarchies/"},{"category":"book","typeLabel":"BOOK","title":"Linear Algebra, Spectral Methods & Matrix Computation","subtitle":"2 chapters · Undergraduate to Graduate","domain":"Applied Math","url":"/books/linear-algebra-and-spectral-methods/"},{"category":"book","typeLabel":"CH. 1","title":"Chapter 1: Inner Product Spaces & Orthogonal Projections","subtitle":"Linear Algebra, Spectral Methods & Matrix Computation","domain":"Applied Math","url":"/books/linear-algebra-and-spectral-methods/chapter-1-inner-product-spaces/"},{"category":"book","typeLabel":"CH. 2","title":"Chapter 2: The Spectral Theorem & Rayleigh Quotients","subtitle":"Linear Algebra, Spectral Methods & Matrix Computation","domain":"Applied Math","url":"/books/linear-algebra-and-spectral-methods/chapter-2-spectral-theorem/"},{"category":"book","typeLabel":"BOOK","title":"Real & Functional Analysis for Computational Scientists","subtitle":"2 chapters · Advanced Undergraduate to Graduate","domain":"Pure Math","url":"/books/real-and-functional-analysis/"},{"category":"book","typeLabel":"CH. 1","title":"Chapter 1: Complete Metric Spaces & Contraction Mappings","subtitle":"Real & Functional Analysis for Computational Scientists","domain":"Pure Math","url":"/books/real-and-functional-analysis/chapter-1-metric-spaces-and-contractions/"},{"category":"book","typeLabel":"CH. 2","title":"Chapter 2: Hilbert Spaces, Riesz Representation & Lax-Milgram","subtitle":"Real & Functional Analysis for Computational Scientists","domain":"Pure Math","url":"/books/real-and-functional-analysis/chapter-2-hilbert-spaces-and-riesz/"},{"category":"article","typeLabel":"ESSAY","title":"Welcome to Math Code Center: Where Formal Proofs Meet Computation","subtitle":"2 min read · Oct 4, 2026","domain":"Pure & Applied Mathematics","url":"/blog/welcome-to-mathcode/"},{"category":"article","typeLabel":"ESSAY","title":"From Pen-and-Paper Proofs to Lean 4: Curry–Howard in Practice","subtitle":"3 min read · Oct 3, 2026","domain":"Lean 4 & Proofs","url":"/blog/constructive-proofs-in-lean4/"},{"category":"article","typeLabel":"ESSAY","title":"Spectral Graph Theory, Cheeger Inequality & Laplacian Eigenvalues","subtitle":"2 min read · Oct 2, 2026","domain":"Applied Mathematics","url":"/blog/spectral-graph-theory-and-laplacians/"},{"category":"article","typeLabel":"ESSAY","title":"Forward-Mode Automatic Differentiation via the Algebra of Dual Numbers","subtitle":"2 min read · Oct 1, 2026","domain":"Algorithms & Code","url":"/blog/autodiff-and-dual-numbers/"}]</script>
-  <header class="topbar">
-    <div class="topbar-zone topbar-left">
-      <button id="sidebarToggleBtn" class="topbar-icon-btn d-none" type="button" aria-label="Toggle Curriculum Drawer" title="Toggle Sidebar">
-        <i class="bi bi-layout-sidebar-inset"></i>
-      </button>
-      <a href="/" class="brand-link" aria-label="Math Code Center Home">
-        <span class="brand-glyph" aria-hidden="true">&sum;</span>
-        <span class="brand-text">Math Code Center</span>
-      </a>
-    </div>
-
-    <nav class="topbar-zone topbar-center" id="primaryNav" aria-label="Primary Navigation">
-      <a href="/library/" class="topnav-link">Library</a>
-      <a href="/courses/" class="topnav-link">Courses</a>
-      <a href="/books/" class="topnav-link active">Books</a>
-      <a href="/blog/" class="topnav-link">Blog</a>
-    </nav>
-
-    <div class="topbar-zone topbar-right">
-      <button id="globalSearchBtn" class="topbar-search-trigger" type="button" aria-label="Quick Search across all courses, books, and articles" title="Quick Search (Ctrl+K or /)">
-        <i class="bi bi-search"></i>
-        <span class="topbar-search-label">Search...</span>
-        <kbd class="topbar-search-kbd">Ctrl K</kbd>
-      </button>
-      <button id="themeToggleBtn" class="topbar-icon-btn" type="button" aria-label="Toggle dark and light theme" title="Toggle theme (Dark / Light)">
-        <i class="bi bi-sun" id="themeToggleIcon"></i>
-      </button>
-      <button id="mobileNavToggleBtn" class="topbar-icon-btn d-md-none" type="button" aria-label="Toggle Navigation Menu" title="Menu">
-        <i class="bi bi-list"></i>
-      </button>
-    </div>
-  </header>
-
-  <nav id="mobileNavDrawer" class="mobile-nav-drawer d-none" aria-label="Mobile Navigation">
-    <a href="/library/" class="mobile-nav-link"><i class="bi bi-collection"></i> Unified Library</a>
-    <a href="/courses/" class="mobile-nav-link"><i class="bi bi-easel2"></i> Interactive Courses</a>
-    <a href="/books/" class="mobile-nav-link active"><i class="bi bi-journal-bookmark"></i> Mathematical Monographs</a>
-    <a href="/blog/" class="mobile-nav-link"><i class="bi bi-pen"></i> Research Essays &amp; Blog</a>
-  </nav>
-
-  <div id="globalSearchModal" class="search-modal-backdrop d-none" role="dialog" aria-modal="true" aria-label="Global Catalog Search">
-    <div class="search-modal-dialog">
-      <div class="search-modal-header">
-        <i class="bi bi-search search-modal-icon"></i>
-        <input type="search" id="globalSearchInput" class="search-modal-input" placeholder="Jump to any course, lesson, book chapter, theorem, or essay..." autocomplete="off">
-        <button type="button" id="globalSearchCloseBtn" class="topbar-icon-btn" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
-      </div>
-      <div class="search-modal-filters" role="group" aria-label="Filter search results by type">
-        <button type="button" class="filter-seg-btn active" data-search-type="all">All</button>
-        <button type="button" class="filter-seg-btn" data-search-type="course">Courses &amp; Lessons</button>
-        <button type="button" class="filter-seg-btn" data-search-type="book">Books &amp; Chapters</button>
-        <button type="button" class="filter-seg-btn" data-search-type="article">Blog Essays</button>
-      </div>
-      <div id="globalSearchResults" class="search-modal-results"></div>
-      <div class="search-modal-footer">
-        <span><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate</span>
-        <span><kbd>Enter</kbd> to open</span>
-        <span><kbd>Esc</kbd> to close</span>
-      </div>
-    </div>
-  </div>
-
-  <main style="flex:1;display:flex;flex-direction:column;overflow:hidden">
-    
-<div class="studio-scroll-page">
-  <div class="studio-container">
-    <header class="page-studio-header">
-      <div class="studio-eyebrow">MATHEMATICAL MONOGRAPHS &amp; FORMAL TEXTBOOKS</div>
-      <h1 class="page-studio-title">Books &amp; Monographs</h1>
-      <p class="page-studio-subtitle">
-        Rigorous, self-contained volumes on dependent type theory in Lean 4, spectral linear algebra, and real &amp; functional analysis—complete with LaTeX proofs and executable code.
-      </p>
-    </header>
-
-    <div class="books-showcase-list">
-      
-      <article class="book-showcase-card">
-        <div class="book-showcase-cover">
-          <a href="/books/theorem-proving-in-lean4/">
-            <img src="/images/book_lean4_proofs.jpg" alt="Theorem Proving &amp; Formal Mathematics in Lean 4" class="book-showcase-img">
-          </a>
-        </div>
-        <div class="book-showcase-body">
-          <div class="card-meta-line">
-            <span class="meta-type-book">MONOGRAPH</span>
-            <span class="meta-dot">&middot;</span>
-            <span>Lean 4 &amp; Proofs</span>
-            <span class="meta-dot">&middot;</span>
-            <span>Intermediate to Advanced</span>
-            <span class="meta-dot">&middot;</span>
-            <span>3 Chapters</span>
-          </div>
-          <h2 class="book-showcase-title"><a href="/books/theorem-proving-in-lean4/">Theorem Proving &amp; Formal Mathematics in Lean 4</a></h2>
-          <p class="book-showcase-subtitle">A Constructive Introduction to Dependent Type Theory, Tactics, and Mathlib</p>
-          <p class="book-showcase-desc">A self-contained monograph on formalizing pure mathematics, algebraic structures, and inductive proofs in Lean 4.</p>
-
-          <div class="book-toc-preview">
-            <div class="toc-preview-heading">Table of Contents</div>
-            <div class="toc-preview-grid">
-              
-              <a href="/books/theorem-proving-in-lean4/chapter-1-dependent-type-theory/" class="toc-chapter-row">
-                <span class="toc-ch-num">Ch. 1</span>
-                <span class="toc-ch-title">Chapter 1: Dependent Type Theory &amp; Universes</span>
-                <span class="toc-ch-meta">3 min read</span>
-                <i class="bi bi-arrow-right toc-ch-arrow"></i>
-              </a>
-              <a href="/books/theorem-proving-in-lean4/chapter-2-tactics-and-equality/" class="toc-chapter-row">
-                <span class="toc-ch-num">Ch. 2</span>
-                <span class="toc-ch-title">Chapter 2: Equational Reasoning, Induction &amp; Tactics</span>
-                <span class="toc-ch-meta">2 min read</span>
-                <i class="bi bi-arrow-right toc-ch-arrow"></i>
-              </a>
-              <a href="/books/theorem-proving-in-lean4/chapter-3-algebraic-hierarchies/" class="toc-chapter-row">
-                <span class="toc-ch-num">Ch. 3</span>
-                <span class="toc-ch-title">Chapter 3: Typeclasses, Rings &amp; Mathlib Hierarchies</span>
-                <span class="toc-ch-meta">2 min read</span>
-                <i class="bi bi-arrow-right toc-ch-arrow"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="book-showcase-actions">
-            <a href="/books/theorem-proving-in-lean4/chapter-1-dependent-type-theory/" class="btn-studio-primary"><i class="bi bi-book-half"></i> Start Reading Chapter 1</a>
-            <a href="/books/theorem-proving-in-lean4/" class="btn-studio-secondary">Book Overview &amp; Syllabus</a>
-          </div>
-        </div>
-      </article>
-      <article class="book-showcase-card">
-        <div class="book-showcase-cover">
-          <a href="/books/linear-algebra-and-spectral-methods/">
-            <img src="/images/book_spectral_linear_algebra.jpg" alt="Linear Algebra, Spectral Methods &amp; Matrix Computation" class="book-showcase-img">
-          </a>
-        </div>
-        <div class="book-showcase-body">
-          <div class="card-meta-line">
-            <span class="meta-type-book">MONOGRAPH</span>
-            <span class="meta-dot">&middot;</span>
-            <span>Applied Math</span>
-            <span class="meta-dot">&middot;</span>
-            <span>Undergraduate to Graduate</span>
-            <span class="meta-dot">&middot;</span>
-            <span>2 Chapters</span>
-          </div>
-          <h2 class="book-showcase-title"><a href="/books/linear-algebra-and-spectral-methods/">Linear Algebra, Spectral Methods &amp; Matrix Computation</a></h2>
-          <p class="book-showcase-subtitle">Eigenvalue Geometry, Singular Value Decomposition, and Numerical Linear Algebra in Python &amp; C</p>
-          <p class="book-showcase-desc">An algorithmic and geometric treatment of vector spaces, spectral decompositions, Krylov subspaces, and numerical stability.</p>
-
-          <div class="book-toc-preview">
-            <div class="toc-preview-heading">Table of Contents</div>
-            <div class="toc-preview-grid">
-              
-              <a href="/books/linear-algebra-and-spectral-methods/chapter-1-inner-product-spaces/" class="toc-chapter-row">
-                <span class="toc-ch-num">Ch. 1</span>
-                <span class="toc-ch-title">Chapter 1: Inner Product Spaces &amp; Orthogonal Projections</span>
-                <span class="toc-ch-meta">2 min read</span>
-                <i class="bi bi-arrow-right toc-ch-arrow"></i>
-              </a>
-              <a href="/books/linear-algebra-and-spectral-methods/chapter-2-spectral-theorem/" class="toc-chapter-row">
-                <span class="toc-ch-num">Ch. 2</span>
-                <span class="toc-ch-title">Chapter 2: The Spectral Theorem &amp; Rayleigh Quotients</span>
-                <span class="toc-ch-meta">2 min read</span>
-                <i class="bi bi-arrow-right toc-ch-arrow"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="book-showcase-actions">
-            <a href="/books/linear-algebra-and-spectral-methods/chapter-1-inner-product-spaces/" class="btn-studio-primary"><i class="bi bi-book-half"></i> Start Reading Chapter 1</a>
-            <a href="/books/linear-algebra-and-spectral-methods/" class="btn-studio-secondary">Book Overview &amp; Syllabus</a>
-          </div>
-        </div>
-      </article>
-      <article class="book-showcase-card">
-        <div class="book-showcase-cover">
-          <a href="/books/real-and-functional-analysis/">
-            <img src="/images/book_real_functional_analysis.jpg" alt="Real &amp; Functional Analysis for Computational Scientists" class="book-showcase-img">
-          </a>
-        </div>
-        <div class="book-showcase-body">
-          <div class="card-meta-line">
-            <span class="meta-type-book">MONOGRAPH</span>
-            <span class="meta-dot">&middot;</span>
-            <span>Pure Math</span>
-            <span class="meta-dot">&middot;</span>
-            <span>Advanced Undergraduate to Graduate</span>
-            <span class="meta-dot">&middot;</span>
-            <span>2 Chapters</span>
-          </div>
-          <h2 class="book-showcase-title"><a href="/books/real-and-functional-analysis/">Real &amp; Functional Analysis for Computational Scientists</a></h2>
-          <p class="book-showcase-subtitle">Metric Topology, Banach &amp; Hilbert Spaces, Measure Theory, and Sobolev Regularity</p>
-          <p class="book-showcase-desc">Rigorous foundations of infinite-dimensional analysis, contraction mappings, Lebesgue integration, and weak derivatives.</p>
-
-          <div class="book-toc-preview">
-            <div class="toc-preview-heading">Table of Contents</div>
-            <div class="toc-preview-grid">
-              
-              <a href="/books/real-and-functional-analysis/chapter-1-metric-spaces-and-contractions/" class="toc-chapter-row">
-                <span class="toc-ch-num">Ch. 1</span>
-                <span class="toc-ch-title">Chapter 1: Complete Metric Spaces &amp; Contraction Mappings</span>
-                <span class="toc-ch-meta">2 min read</span>
-                <i class="bi bi-arrow-right toc-ch-arrow"></i>
-              </a>
-              <a href="/books/real-and-functional-analysis/chapter-2-hilbert-spaces-and-riesz/" class="toc-chapter-row">
-                <span class="toc-ch-num">Ch. 2</span>
-                <span class="toc-ch-title">Chapter 2: Hilbert Spaces, Riesz Representation &amp; Lax-Milgram</span>
-                <span class="toc-ch-meta">2 min read</span>
-                <i class="bi bi-arrow-right toc-ch-arrow"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="book-showcase-actions">
-            <a href="/books/real-and-functional-analysis/chapter-1-metric-spaces-and-contractions/" class="btn-studio-primary"><i class="bi bi-book-half"></i> Start Reading Chapter 1</a>
-            <a href="/books/real-and-functional-analysis/" class="btn-studio-secondary">Book Overview &amp; Syllabus</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</div>
-  </main>
-
-  <footer class="statusbar">
-    <span class="statusbar-left"></span>
-    <span class="statusbar-center">&copy; 2026 Math Code Center. Pure &amp; Applied Mathematics &middot; Lean 4 &middot; Scientific Computing.</span>
-    <span class="statusbar-right"></span>
-  </footer>
-</body>
-</html>
+<!doctype html><html lang=en-us data-bs-theme=dark><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Books & Monographs | Quantum Funda</title><meta name=description content="Open-access monographs on the mathematics of quantum computing: quantum linear algebra, functional analysis for quantum theory, and formalization in Lean 4."><meta property="og:title" content="Books & Monographs"><meta property="og:description" content="Open-access monographs on the mathematics of quantum computing: quantum linear algebra, functional analysis for quantum theory, and formalization in Lean 4."><meta property="og:image" content="https://mathcode.org/og.png"><meta property="og:url" content="https://mathcode.org/books/"><meta property="og:type" content="website"><meta property="og:site_name" content="Quantum Funda"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Books & Monographs"><meta name=twitter:description content="Open-access monographs on the mathematics of quantum computing: quantum linear algebra, functional analysis for quantum theory, and formalization in Lean 4."><meta name=twitter:image content="https://mathcode.org/og.png"><link rel=icon type=image/png href=/pc.png><script>(function(){try{var e=localStorage.getItem("mathcode-theme")||"dark";document.documentElement.setAttribute("data-bs-theme",e)}catch{document.documentElement.setAttribute("data-bs-theme","dark")}})()</script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=JetBrains+Mono:ital,wght@0,400..700;1,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js></script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js></script><script>window.__APP_CONFIG__={mobileBreakpoint:1279}</script><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js defer></script><link rel=stylesheet href=/css/main.a206b1819e5a8cb23f511f6f20b268432b26f2be6e9a242188f7d12bd720ff44.css integrity="sha256-ogaxgZ5ajLI/UR9vILJoQysm8r5umiQhiPfRK9cg/0Q="><script src=/js/main.4eb1a57ed54ae3f3130a100860049eb0370bf17d027541180bbb548fb42f7a12.js integrity="sha256-TrGlftVK4/MTChAIYASesDcL8X0CdUEYC7tUj7QvehI=" defer></script></head><body class="d-flex flex-column vh-100"><header class=topbar><div class="topbar-zone topbar-left"><button id=sidebarToggleBtn class="topbar-icon-btn d-none" type=button aria-label="Toggle Curriculum Drawer" title="Toggle Sidebar">
+<i class="bi bi-layout-sidebar-inset"></i>
+</button>
+<a href=/ class=brand-link aria-label="Quantum Funda Home"><span class=brand-glyph aria-hidden=true>&Psi;</span>
+<span class=brand-text>Quantum Funda</span></a></div><nav class="topbar-zone topbar-center" id=primaryNav aria-label="Primary Navigation"><a href=/library/ class=topnav-link>Library</a>
+<a href=/courses/ class=topnav-link>Courses</a>
+<a href=/books/ class="topnav-link active">Books</a>
+<a href=/blog/ class=topnav-link>Blog</a></nav><div class="topbar-zone topbar-right"><button id=globalSearchBtn class=topbar-search-trigger type=button aria-label="Quick Search across all courses, books, and articles" title="Quick Search (Ctrl+K or /)">
+<i class="bi bi-search"></i>
+<span class=topbar-search-label>Search...</span>
+<kbd class=topbar-search-kbd>Ctrl K</kbd>
+</button>
+<button id=themeToggleBtn class=topbar-icon-btn type=button aria-label="Toggle dark and light theme" title="Toggle theme (Dark / Light)">
+<i class="bi bi-sun" id=themeToggleIcon></i>
+</button>
+<button id=mobileNavToggleBtn class="topbar-icon-btn d-md-none" type=button aria-label="Toggle Navigation Menu" title=Menu>
+<i class="bi bi-list"></i></button></div></header><nav id=mobileNavDrawer class="mobile-nav-drawer d-none" aria-label="Mobile Navigation"><a href=/library/ class=mobile-nav-link><i class="bi bi-collection"></i> Unified Library</a>
+<a href=/courses/ class=mobile-nav-link><i class="bi bi-easel2"></i> Interactive Courses</a>
+<a href=/books/ class="mobile-nav-link active"><i class="bi bi-journal-bookmark"></i> Quantum Monographs</a>
+<a href=/blog/ class=mobile-nav-link><i class="bi bi-pen"></i> Research Essays & Blog</a></nav><div id=globalSearchModal class="search-modal-backdrop d-none" role=dialog aria-modal=true aria-label="Global Catalog Search"><div class=search-modal-dialog><div class=search-modal-header><i class="bi bi-search search-modal-icon"></i>
+<input type=search id=globalSearchInput class=search-modal-input placeholder="Jump to any course, lesson, book chapter, theorem, or essay..." autocomplete=off>
+<button type=button id=globalSearchCloseBtn class=topbar-icon-btn aria-label="Close search"><i class="bi bi-x-lg"></i></button></div><div class=search-modal-filters role=group aria-label="Filter search results by type"><button type=button class="filter-seg-btn active" data-search-type=all>All</button>
+<button type=button class=filter-seg-btn data-search-type=course>Courses & Lessons</button>
+<button type=button class=filter-seg-btn data-search-type=book>Books & Chapters</button>
+<button type=button class=filter-seg-btn data-search-type=article>Blog Essays</button></div><div id=globalSearchResults class=search-modal-results></div><div class=search-modal-footer><span><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate</span>
+<span><kbd>Enter</kbd> to open</span>
+<span><kbd>Esc</kbd> to close</span></div></div></div><main class="flex-grow-1 overflow-hidden"><div class=studio-scroll-page><div class=studio-container><header class=page-studio-header><div class=studio-eyebrow>MATHEMATICAL & COMPUTATIONAL MONOGRAPHS</div><h1 class=page-studio-title>Books & Lecture Monographs</h1><p class=page-studio-desc>Self-contained multi-chapter volumes pairing rigorous quantum mathematical proofs in LaTeX with verifiable implementations in <strong>Lean 4</strong>, <strong>Python</strong>, and <strong>C</strong>.</p></header><div class=books-catalog-list><article class=book-catalog-panel><div class=book-catalog-cover-col><a href=/books/formalizing-quantum-in-lean4/ class=book-cover-wrap><img src=/images/book_lean4_proofs.jpg alt="Formalizing Quantum Computing in Lean 4" class=book-cover-img></a></div><div class=book-catalog-info-col><div class=card-meta-line><span>MONOGRAPH</span>
+<span class=meta-dot>&#183;</span>
+<span>Quantum Computation</span>
+<span class=meta-dot>&#183;</span>
+<span>Intermediate to Advanced</span>
+<span class=meta-dot>&#183;</span>
+<span>3 Chapters</span></div><h2 class=book-catalog-title><a href=/books/formalizing-quantum-in-lean4/>Formalizing Quantum Computing in Lean 4</a></h2><p class=book-catalog-subtitle>Dependent Types, Unitary Algebras, and Mathlib for Quantum Theory</p><div class="book-catalog-synopsis markdown-body"><p>This monograph develops interactive theorem proving for quantum computing from the foundations of the <strong>Calculus of Inductive Constructions</strong> to algebraic hierarchies of Hilbert spaces in <strong>Mathlib 4</strong>. Every chapter pairs mathematical definitions in LaTeX with complete, self-contained <strong>Lean 4</strong> formalizations.</p></div><div class=book-chapters-preview><div class=chapters-preview-heading>TABLE OF CONTENTS</div><div class=chapters-preview-list><a href=/books/formalizing-quantum-in-lean4/chapter-1-dependent-type-theory-and-states/ class=chapter-preview-row><span class=chapter-row-title>Chapter 1: Dependent Type Theory & Quantum State Spaces</span>
+<span class=chapter-row-arrow>Read Chapter <i class="bi bi-arrow-right"></i></span>
+</a><a href=/books/formalizing-quantum-in-lean4/chapter-2-unitary-equational-reasoning/ class=chapter-preview-row><span class=chapter-row-title>Chapter 2: Equational Reasoning & Unitary Identities</span>
+<span class=chapter-row-arrow>Read Chapter <i class="bi bi-arrow-right"></i></span>
+</a><a href=/books/formalizing-quantum-in-lean4/chapter-3-algebraic-hierarchies-and-mathlib/ class=chapter-preview-row><span class=chapter-row-title>Chapter 3: Algebraic Hierarchies: Groups, Operators & Mathlib</span>
+<span class=chapter-row-arrow>Read Chapter <i class="bi bi-arrow-right"></i></span></a></div></div><div class="mt-3 d-flex flex-wrap gap-2"><a href=/books/formalizing-quantum-in-lean4/chapter-1-dependent-type-theory-and-states/ class=btn-studio-primary><i class="bi bi-book-half"></i> Start Reading Chapter 1</a>
+<a href=/books/formalizing-quantum-in-lean4/ class=btn-studio-secondary>Book Overview</a></div></div></article><article class=book-catalog-panel><div class=book-catalog-cover-col><a href=/books/quantum-linear-algebra/ class=book-cover-wrap><img src=/images/book_spectral_linear_algebra.jpg alt="Quantum Linear Algebra & Spectral Methods" class=book-cover-img></a></div><div class=book-catalog-info-col><div class=card-meta-line><span>MONOGRAPH</span>
+<span class=meta-dot>&#183;</span>
+<span>Quantum Foundations</span>
+<span class=meta-dot>&#183;</span>
+<span>Undergraduate to Graduate</span>
+<span class=meta-dot>&#183;</span>
+<span>2 Chapters</span></div><h2 class=book-catalog-title><a href=/books/quantum-linear-algebra/>Quantum Linear Algebra & Spectral Methods</a></h2><p class=book-catalog-subtitle>Hilbert-Space Geometry, Tensor Products, SVD, and Numerical Quantum Linear Algebra in Python & C</p><div class="book-catalog-synopsis markdown-body"><p>This monograph connects the abstract operator theory of finite-dimensional Hilbert spaces $(\mathcal{H}, \langle \cdot, \cdot \rangle)$ with the matrix factorizations that drive quantum computation. Each chapter develops rigorous proofs alongside numerical implementations in <strong>Python</strong> and <strong>C</strong>.</p></div><div class=book-chapters-preview><div class=chapters-preview-heading>TABLE OF CONTENTS</div><div class=chapters-preview-list><a href=/books/quantum-linear-algebra/chapter-1-hilbert-spaces-and-tensor-products/ class=chapter-preview-row><span class=chapter-row-title>Chapter 1: Hilbert Spaces, Bra–Ket Notation & Tensor Products</span>
+<span class=chapter-row-arrow>Read Chapter <i class="bi bi-arrow-right"></i></span>
+</a><a href=/books/quantum-linear-algebra/chapter-2-spectral-theorem-and-observables/ class=chapter-preview-row><span class=chapter-row-title>Chapter 2: The Spectral Theorem, Rayleigh Quotients & Quantum Observables</span>
+<span class=chapter-row-arrow>Read Chapter <i class="bi bi-arrow-right"></i></span></a></div></div><div class="mt-3 d-flex flex-wrap gap-2"><a href=/books/quantum-linear-algebra/chapter-1-hilbert-spaces-and-tensor-products/ class=btn-studio-primary><i class="bi bi-book-half"></i> Start Reading Chapter 1</a>
+<a href=/books/quantum-linear-algebra/ class=btn-studio-secondary>Book Overview</a></div></div></article><article class=book-catalog-panel><div class=book-catalog-cover-col><a href=/books/functional-analysis-for-quantum/ class=book-cover-wrap><img src=/images/book_real_functional_analysis.jpg alt="Functional Analysis for Quantum Computing" class=book-cover-img></a></div><div class=book-catalog-info-col><div class=card-meta-line><span>MONOGRAPH</span>
+<span class=meta-dot>&#183;</span>
+<span>Quantum Foundations</span>
+<span class=meta-dot>&#183;</span>
+<span>Advanced Undergraduate to Graduate</span>
+<span class=meta-dot>&#183;</span>
+<span>2 Chapters</span></div><h2 class=book-catalog-title><a href=/books/functional-analysis-for-quantum/>Functional Analysis for Quantum Computing</a></h2><p class=book-catalog-subtitle>Operator Norms, C*-Algebras, Banach Fixed Points, and Quantum Channels</p><div class="book-catalog-synopsis markdown-body"><p>Bridging pure functional analysis and quantum information, this monograph develops complete metric spaces, the <strong>Banach Fixed-Point Theorem</strong>, $L^p(\Omega)$ spaces, and <em><em>C</em>-algebra</em>* structure alongside formal Lean 4 statements and numerical approximations.</p></div><div class=book-chapters-preview><div class=chapters-preview-heading>TABLE OF CONTENTS</div><div class=chapters-preview-list><a href=/books/functional-analysis-for-quantum/chapter-1-operator-norms-and-contractions/ class=chapter-preview-row><span class=chapter-row-title>Chapter 1: Complete Metric Spaces, Contractions & Operator Fixed Points</span>
+<span class=chapter-row-arrow>Read Chapter <i class="bi bi-arrow-right"></i></span>
+</a><a href=/books/functional-analysis-for-quantum/chapter-2-cstar-algebras-and-channels/ class=chapter-preview-row><span class=chapter-row-title>Chapter 2: C*-Algebras, Quantum Channels & Riesz Representations</span>
+<span class=chapter-row-arrow>Read Chapter <i class="bi bi-arrow-right"></i></span></a></div></div><div class="mt-3 d-flex flex-wrap gap-2"><a href=/books/functional-analysis-for-quantum/chapter-1-operator-norms-and-contractions/ class=btn-studio-primary><i class="bi bi-book-half"></i> Start Reading Chapter 1</a>
+<a href=/books/functional-analysis-for-quantum/ class=btn-studio-secondary>Book Overview</a></div></div></article></div></div></div></main><footer class=statusbar><span class=statusbar-left></span>
+<span class=statusbar-center>&copy; 2026 Quantum Funda. Quantum Foundations &#183; Quantum Computation &#183; Quantum Algorithms &#183; Quantum Optimization.</span>
+<span class=statusbar-right></span></footer></body></html>

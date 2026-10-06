@@ -10,10 +10,10 @@
     <!-- Hero Section -->
     <section class="studio-hero">
       <div class="studio-hero-copy">
-        <div class="studio-eyebrow">PURE &amp; APPLIED MATHEMATICS &middot; FORMAL PROOFS &middot; SCIENTIFIC COMPUTING</div>
-        <h1 class="studio-display-title">Where Formal Mathematical Proof Meets Executable Code.</h1>
+        <div class="studio-eyebrow">QUANTUM COMPUTING MATHEMATICS &middot; QUANTUM FOUNDATIONS &middot; QUANTUM ALGORITHMS &middot; QUANTUM OPTIMIZATION</div>
+        <h1 class="studio-display-title">Where Quantum Theory Meets Rigorous Mathematics.</h1>
         <p class="studio-lead">
-          Math Code Center is an open academic studio uniting rigorous mathematical exposition in LaTeX, constructive theorem proving in <strong>Lean 4</strong>, and scientific computation in <strong>Python</strong>, <strong>C</strong>, and <strong>Rust</strong>.
+          Quantum Funda is an open academic studio for the mathematics of quantum computing: rigorous exposition in LaTeX, formal statement proving in <strong>Lean 4</strong>, and numerical quantum computation in <strong>Python</strong> and <strong>C</strong>.
         </p>
         <div class="studio-cta-row">
           <a href="/library/" class="btn-studio-primary">
@@ -33,25 +33,25 @@
           <span class="meta-dot">&middot;</span>
           <span>{{ len $articles }} Research Essays</span>
           <span class="meta-dot">&middot;</span>
-          <span>Native LaTeX &amp; Lean 4</span>
+          <span>Native LaTeX &amp; Lean 4 &amp; Quantum Numerics</span>
         </div>
       </div>
 
       <div class="studio-hero-showcase">
         <div class="hero-visual-frame">
-          <img src="/images/hero_math_code_studio.jpg" alt="Geometric manifolds, commutative diagrams, and formal proof trees" class="hero-visual-img">
+          <img src="/images/hero_math_code_studio.jpg" alt="Quantum circuits, Hilbert space geometry, and unitary operator diagrams" class="hero-visual-img">
           <div class="hero-proof-overlay">
             <div class="hero-proof-header">
               <span class="proof-status-indicator"><i class="bi bi-check2-circle"></i> Verified Formalization</span>
               <span class="proof-lang-meta">Lean 4 &middot; Mathlib</span>
             </div>
             <div class="hero-proof-formula">
-              $$\forall f : \alpha \to \beta,\; \text{Injective}(f) \iff \forall x_1\, x_2,\; f(x_1) = f(x_2) \implies x_1 = x_2$$
+              $$i\hbar \frac{d}{dt} |\psi(t)\rangle = \hat{H}\, |\psi(t)\rangle \quad\Longrightarrow\quad |\psi(t)\rangle = e^{-i\hat{H}t/\hbar} |\psi(0)\rangle$$
             </div>
-            <pre class="hero-proof-code"><code class="language-lean">theorem comp_injective {f : α → β} {g : β → γ}
-    (hf : Injective f) (hg : Injective g) :
-    Injective (g ∘ f) :=
-  fun _ _ h => hf (hg h)</code></pre>
+            <pre class="hero-proof-code"><code class="language-lean">theorem unitary_mul {U V : Matrix (Fin 2) (Fin 2) ℂ}
+    (hU : Uᴴ * U = 1) (hV : Vᴴ * V = 1) :
+    (V * U)ᴴ * (V * U) = 1 := by
+  simp [Matrix.conjTranspose_mul, hU, hV, Matrix.mul_assoc]</code></pre>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
             <i class="bi bi-collection pillar-icon"></i>
           </div>
           <h3 class="pillar-title">Unified Library</h3>
-          <p class="pillar-desc">Search and filter every course, multi-chapter book, Lean 4 formalization, and mathematical article from a single index.</p>
+          <p class="pillar-desc">Search and filter every course, multi-chapter book, Lean 4 formalization, and quantum mathematics article from a single index.</p>
           <div class="pillar-meta">ALL RESOURCES &middot; INSTANT FILTER</div>
         </a>
 
@@ -93,8 +93,8 @@
             <span class="pillar-index">03</span>
             <i class="bi bi-journal-bookmark pillar-icon"></i>
           </div>
-          <h3 class="pillar-title">Mathematical Monographs</h3>
-          <p class="pillar-desc">Self-contained multi-chapter books on Dependent Type Theory, Spectral Linear Algebra, and Functional Analysis.</p>
+          <h3 class="pillar-title">Quantum Monographs</h3>
+          <p class="pillar-desc">Self-contained multi-chapter books on Quantum Linear Algebra, Functional Analysis for Quantum Computing, and Formalizing Quantum Computing in Lean 4.</p>
           <div class="pillar-meta">{{ len $books }} MONOGRAPHS &middot; CHAPTER READER</div>
         </a>
 
@@ -104,7 +104,7 @@
             <i class="bi bi-pen pillar-icon"></i>
           </div>
           <h3 class="pillar-title">Research Essays &amp; Blog</h3>
-          <p class="pillar-desc">Deep technical expositions on Curry–Howard correspondence, spectral graph theory, automatic differentiation, and PDEs.</p>
+          <p class="pillar-desc">Deep technical expositions on quantum walks and graph Laplacians, the parameter-shift rule for variational circuits, formalizing quantum theory in Lean 4, and amplitude amplification.</p>
           <div class="pillar-meta">{{ len $articles }} ESSAYS &middot; LONG-FORM LATEX</div>
         </a>
       </div>
@@ -115,7 +115,7 @@
       <div class="section-header-row">
         <div>
           <div class="section-kicker">INTERACTIVE CURRICULUM</div>
-          <h2 class="section-title">Core Mathematics &amp; Code Courses</h2>
+          <h2 class="section-title">Core Quantum Mathematics Courses</h2>
         </div>
         <a href="/courses/" class="section-link">Open Course Workspace <i class="bi bi-arrow-right"></i></a>
       </div>
@@ -146,7 +146,7 @@
       <div class="section-header-row">
         <div>
           <div class="section-kicker">UNIVERSITY PRESS STUDIO</div>
-          <h2 class="section-title">Mathematical &amp; Computational Monographs</h2>
+          <h2 class="section-title">Quantum &amp; Computational Monographs</h2>
         </div>
         <a href="/books/" class="section-link">View All Books <i class="bi bi-arrow-right"></i></a>
       </div>

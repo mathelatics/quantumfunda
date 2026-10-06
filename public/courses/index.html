@@ -1,212 +1,49 @@
-<!DOCTYPE html>
-<html lang="en-us" data-bs-theme="dark">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Courses | Math Code Center</title>
-  <meta name="description" content="Interactive courses on Lean 4 theorem proving, pure mathematics, and applied scientific computing.">
-  <meta property="og:title" content="Interactive Courses">
-  <meta property="og:description" content="Interactive courses on Lean 4 theorem proving, pure mathematics, and applied scientific computing.">
-  <meta property="og:image" content="https://mathcode.org/og.png">
-  <meta property="og:url" content="https://mathcode.org/courses/">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Math Code Center">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Interactive Courses">
-  <meta name="twitter:description" content="Interactive courses on Lean 4 theorem proving, pure mathematics, and applied scientific computing.">
-  <meta name="twitter:image" content="https://mathcode.org/og.png">
-  <link rel="icon" type="image/png" href="/pc.png">
-  <script>
-    (function() {
-      try {
-        var savedTheme = localStorage.getItem('mathcode-theme') || 'dark';
-        document.documentElement.setAttribute('data-bs-theme', savedTheme);
-      } catch (e) {
-        document.documentElement.setAttribute('data-bs-theme', 'dark');
-      }
-    })();
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=JetBrains+Mono:ital,wght@0,400..700;1,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>
-  window.__APP_CONFIG__ = {
-    mobileBreakpoint: 1279
-  };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-  <link rel="stylesheet" href="/css/main.css">
-  <script src="/js/main.js" defer></script>
-</head>
-<body>
-  <script id="global-search-index" type="application/json">[{"category":"course","typeLabel":"COURSE","title":"Formal Proofs & Type Theory in Lean 4","subtitle":"2 lessons · Intermediate","domain":"Lean 4 & Proofs","url":"/courses/lean4-formal-proofs/"},{"category":"course","typeLabel":"COURSE","title":"Pure Mathematics: Algebra, Analysis & Number Theory","subtitle":"2 lessons · Intermediate","domain":"Pure Mathematics","url":"/courses/pure-mathematics/"},{"category":"course","typeLabel":"COURSE","title":"Applied Mathematics & Scientific Computing","subtitle":"2 lessons · Advanced","domain":"Applied Mathematics","url":"/courses/applied-scientific-computing/"},{"category":"course","typeLabel":"LESSON","title":"Propositions as Types & Curry–Howard","subtitle":"Formal Proofs & Type Theory in Lean 4 (Foundations)","domain":"Lean 4 & Proofs","url":"/courses/lean4-formal-proofs/foundations/propositions-as-types/"},{"category":"course","typeLabel":"LESSON","title":"Structural Induction & Algebraic Monoids","subtitle":"Formal Proofs & Type Theory in Lean 4 (Foundations)","domain":"Lean 4 & Proofs","url":"/courses/lean4-formal-proofs/foundations/induction-and-algebraic-structures/"},{"category":"course","typeLabel":"LESSON","title":"Modular Arithmetic & Euler Totient Theorem","subtitle":"Pure Mathematics: Algebra, Analysis & Number Theory (Number Theory)","domain":"Pure Mathematics","url":"/courses/pure-mathematics/number-theory/modular-arithmetic-and-fermat/"},{"category":"course","typeLabel":"LESSON","title":"The Spectral Theorem & Singular Value Decomposition","subtitle":"Pure Mathematics: Algebra, Analysis & Number Theory (Linear Algebra)","domain":"Pure Mathematics","url":"/courses/pure-mathematics/linear-algebra/svd-and-spectral-theorem/"},{"category":"course","typeLabel":"LESSON","title":"Newton–Raphson Convergence & Convex Optimization","subtitle":"Applied Mathematics & Scientific Computing (Numerical Analysis)","domain":"Applied Mathematics","url":"/courses/applied-scientific-computing/numerical-analysis/newton-krylov-and-optimization/"},{"category":"course","typeLabel":"LESSON","title":"Symplectic Integrators & Hamiltonian Mechanics","subtitle":"Applied Mathematics & Scientific Computing (Differential Equations)","domain":"Applied Mathematics","url":"/courses/applied-scientific-computing/differential-equations/symplectic-integrators-and-ode/"},{"category":"book","typeLabel":"BOOK","title":"Theorem Proving & Formal Mathematics in Lean 4","subtitle":"3 chapters · Intermediate to Advanced","domain":"Lean 4 & Proofs","url":"/books/theorem-proving-in-lean4/"},{"category":"book","typeLabel":"CH. 1","title":"Chapter 1: Dependent Type Theory & Universes","subtitle":"Theorem Proving & Formal Mathematics in Lean 4","domain":"Lean 4 & Proofs","url":"/books/theorem-proving-in-lean4/chapter-1-dependent-type-theory/"},{"category":"book","typeLabel":"CH. 2","title":"Chapter 2: Equational Reasoning, Induction & Tactics","subtitle":"Theorem Proving & Formal Mathematics in Lean 4","domain":"Lean 4 & Proofs","url":"/books/theorem-proving-in-lean4/chapter-2-tactics-and-equality/"},{"category":"book","typeLabel":"CH. 3","title":"Chapter 3: Typeclasses, Rings & Mathlib Hierarchies","subtitle":"Theorem Proving & Formal Mathematics in Lean 4","domain":"Lean 4 & Proofs","url":"/books/theorem-proving-in-lean4/chapter-3-algebraic-hierarchies/"},{"category":"book","typeLabel":"BOOK","title":"Linear Algebra, Spectral Methods & Matrix Computation","subtitle":"2 chapters · Undergraduate to Graduate","domain":"Applied Math","url":"/books/linear-algebra-and-spectral-methods/"},{"category":"book","typeLabel":"CH. 1","title":"Chapter 1: Inner Product Spaces & Orthogonal Projections","subtitle":"Linear Algebra, Spectral Methods & Matrix Computation","domain":"Applied Math","url":"/books/linear-algebra-and-spectral-methods/chapter-1-inner-product-spaces/"},{"category":"book","typeLabel":"CH. 2","title":"Chapter 2: The Spectral Theorem & Rayleigh Quotients","subtitle":"Linear Algebra, Spectral Methods & Matrix Computation","domain":"Applied Math","url":"/books/linear-algebra-and-spectral-methods/chapter-2-spectral-theorem/"},{"category":"book","typeLabel":"BOOK","title":"Real & Functional Analysis for Computational Scientists","subtitle":"2 chapters · Advanced Undergraduate to Graduate","domain":"Pure Math","url":"/books/real-and-functional-analysis/"},{"category":"book","typeLabel":"CH. 1","title":"Chapter 1: Complete Metric Spaces & Contraction Mappings","subtitle":"Real & Functional Analysis for Computational Scientists","domain":"Pure Math","url":"/books/real-and-functional-analysis/chapter-1-metric-spaces-and-contractions/"},{"category":"book","typeLabel":"CH. 2","title":"Chapter 2: Hilbert Spaces, Riesz Representation & Lax-Milgram","subtitle":"Real & Functional Analysis for Computational Scientists","domain":"Pure Math","url":"/books/real-and-functional-analysis/chapter-2-hilbert-spaces-and-riesz/"},{"category":"article","typeLabel":"ESSAY","title":"Welcome to Math Code Center: Where Formal Proofs Meet Computation","subtitle":"2 min read · Oct 4, 2026","domain":"Pure & Applied Mathematics","url":"/blog/welcome-to-mathcode/"},{"category":"article","typeLabel":"ESSAY","title":"From Pen-and-Paper Proofs to Lean 4: Curry–Howard in Practice","subtitle":"3 min read · Oct 3, 2026","domain":"Lean 4 & Proofs","url":"/blog/constructive-proofs-in-lean4/"},{"category":"article","typeLabel":"ESSAY","title":"Spectral Graph Theory, Cheeger Inequality & Laplacian Eigenvalues","subtitle":"2 min read · Oct 2, 2026","domain":"Applied Mathematics","url":"/blog/spectral-graph-theory-and-laplacians/"},{"category":"article","typeLabel":"ESSAY","title":"Forward-Mode Automatic Differentiation via the Algebra of Dual Numbers","subtitle":"2 min read · Oct 1, 2026","domain":"Algorithms & Code","url":"/blog/autodiff-and-dual-numbers/"}]</script>
-  <header class="topbar">
-    <div class="topbar-zone topbar-left">
-      <button id="sidebarToggleBtn" class="topbar-icon-btn d-none" type="button" aria-label="Toggle Curriculum Drawer" title="Toggle Sidebar">
-        <i class="bi bi-layout-sidebar-inset"></i>
-      </button>
-      <a href="/" class="brand-link" aria-label="Math Code Center Home">
-        <span class="brand-glyph" aria-hidden="true">&sum;</span>
-        <span class="brand-text">Math Code Center</span>
-      </a>
-    </div>
-
-    <nav class="topbar-zone topbar-center" id="primaryNav" aria-label="Primary Navigation">
-      <a href="/library/" class="topnav-link">Library</a>
-      <a href="/courses/" class="topnav-link active">Courses</a>
-      <a href="/books/" class="topnav-link">Books</a>
-      <a href="/blog/" class="topnav-link">Blog</a>
-    </nav>
-
-    <div class="topbar-zone topbar-right">
-      <button id="globalSearchBtn" class="topbar-search-trigger" type="button" aria-label="Quick Search across all courses, books, and articles" title="Quick Search (Ctrl+K or /)">
-        <i class="bi bi-search"></i>
-        <span class="topbar-search-label">Search...</span>
-        <kbd class="topbar-search-kbd">Ctrl K</kbd>
-      </button>
-      <button id="themeToggleBtn" class="topbar-icon-btn" type="button" aria-label="Toggle dark and light theme" title="Toggle theme (Dark / Light)">
-        <i class="bi bi-sun" id="themeToggleIcon"></i>
-      </button>
-      <button id="mobileNavToggleBtn" class="topbar-icon-btn d-md-none" type="button" aria-label="Toggle Navigation Menu" title="Menu">
-        <i class="bi bi-list"></i>
-      </button>
-    </div>
-  </header>
-
-  <nav id="mobileNavDrawer" class="mobile-nav-drawer d-none" aria-label="Mobile Navigation">
-    <a href="/library/" class="mobile-nav-link"><i class="bi bi-collection"></i> Unified Library</a>
-    <a href="/courses/" class="mobile-nav-link active"><i class="bi bi-easel2"></i> Interactive Courses</a>
-    <a href="/books/" class="mobile-nav-link"><i class="bi bi-journal-bookmark"></i> Mathematical Monographs</a>
-    <a href="/blog/" class="mobile-nav-link"><i class="bi bi-pen"></i> Research Essays &amp; Blog</a>
-  </nav>
-
-  <div id="globalSearchModal" class="search-modal-backdrop d-none" role="dialog" aria-modal="true" aria-label="Global Catalog Search">
-    <div class="search-modal-dialog">
-      <div class="search-modal-header">
-        <i class="bi bi-search search-modal-icon"></i>
-        <input type="search" id="globalSearchInput" class="search-modal-input" placeholder="Jump to any course, lesson, book chapter, theorem, or essay..." autocomplete="off">
-        <button type="button" id="globalSearchCloseBtn" class="topbar-icon-btn" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
-      </div>
-      <div class="search-modal-filters" role="group" aria-label="Filter search results by type">
-        <button type="button" class="filter-seg-btn active" data-search-type="all">All</button>
-        <button type="button" class="filter-seg-btn" data-search-type="course">Courses &amp; Lessons</button>
-        <button type="button" class="filter-seg-btn" data-search-type="book">Books &amp; Chapters</button>
-        <button type="button" class="filter-seg-btn" data-search-type="article">Blog Essays</button>
-      </div>
-      <div id="globalSearchResults" class="search-modal-results"></div>
-      <div class="search-modal-footer">
-        <span><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate</span>
-        <span><kbd>Enter</kbd> to open</span>
-        <span><kbd>Esc</kbd> to close</span>
-      </div>
-    </div>
-  </div>
-
-  <main style="flex:1;display:flex;flex-direction:column;overflow:hidden">
-    
-<div class="studio-scroll-page">
-  <div class="studio-container">
-    <header class="page-studio-header">
-      <div class="studio-eyebrow">STRUCTURED CURRICULUM &middot; LECTURES, FORMAL CODE &amp; QUIZZES</div>
-      <h1 class="page-studio-title">Interactive Mathematics &amp; Code Courses</h1>
-      <p class="page-studio-subtitle">
-        Rigorous courses combining LaTeX mathematical derivations, constructive proofs in Lean 4, scientific implementations in Python, C, and Rust, and interactive self-check quizzes.
-      </p>
-
-      <div class="library-controls-bar" id="coursesFilterBar">
-        <div class="library-search-wrap">
-          <i class="bi bi-search library-search-icon"></i>
-          <input type="search" id="coursesSearchInput" class="library-search-input" placeholder="Search courses, modules, theorems, or languages (e.g. Lean 4, Spectral, Symplectic, C)..." autocomplete="off">
-        </div>
-        <div class="filter-segment-group" role="group" aria-label="Filter courses by domain">
-          <button type="button" class="filter-seg-btn active" data-course-domain="all">All Tracks (3)</button>
-          <button type="button" class="filter-seg-btn" data-course-domain="Formal Proofs & Lean 4">Lean 4 &amp; Proofs</button>
-          <button type="button" class="filter-seg-btn" data-course-domain="Pure Math">Pure Math</button>
-          <button type="button" class="filter-seg-btn" data-course-domain="Applied Math">Applied Math</button>
-        </div>
-      </div>
-
-      <div class="library-status-bar">
-        <span id="coursesResultCount">Showing all 3 course tracks (6 interactive lessons)</span>
-        <button type="button" id="coursesResetBtn" class="library-reset-link d-none">Reset filters</button>
-      </div>
-    </header>
-
-    <div class="catalog-grid-3" id="coursesCatalogList">
-      
-      <article class="studio-card course-catalog-card" data-domain="Lean 4 &amp; Proofs" data-search="formal proofs &amp; type theory in lean 4 master constructive logic, dependent type theory, tactic-driven theorem proving, and algebraic hierarchies in lean 4. lean 4 &amp; proofs lean 4 propositions as types &amp; curry–howard structural induction &amp; algebraic monoids">
-        <div class="card-meta-line">
-          <span class="meta-type-course">COURSE 01</span>
-          <span class="meta-dot">&middot;</span>
-          <span>Lean 4 &amp; Proofs</span>
-          <span class="meta-dot">&middot;</span>
-          <span>2 Lessons</span>
-        </div>
-
-        <h2 class="card-title"><a href="/courses/lean4-formal-proofs/">Formal Proofs &amp; Type Theory in Lean 4</a></h2>
-        <p class="card-excerpt">Master constructive logic, dependent type theory, tactic-driven theorem proving, and algebraic hierarchies in Lean 4.</p>
-
-        <div class="card-footer-row course-card-footer">
-          <a href="/courses/lean4-formal-proofs/foundations/propositions-as-types/" class="btn-studio-primary course-card-start-btn"><i class="bi bi-play-fill"></i> Start Course</a>
-          <a href="/courses/lean4-formal-proofs/" class="card-action-link">Syllabus <i class="bi bi-arrow-up-right"></i></a>
-        </div>
-      </article>
-      <article class="studio-card course-catalog-card" data-domain="Pure Mathematics" data-search="pure mathematics: algebra, analysis &amp; number theory rigorous foundations of number theory, group actions, real analysis, and spectral linear algebra paired with formal proofs and algorithms. pure mathematics python modular arithmetic &amp; euler totient theorem the spectral theorem &amp; singular value decomposition">
-        <div class="card-meta-line">
-          <span class="meta-type-course">COURSE 02</span>
-          <span class="meta-dot">&middot;</span>
-          <span>Pure Mathematics</span>
-          <span class="meta-dot">&middot;</span>
-          <span>2 Lessons</span>
-        </div>
-
-        <h2 class="card-title"><a href="/courses/pure-mathematics/">Pure Mathematics: Algebra, Analysis &amp; Number Theory</a></h2>
-        <p class="card-excerpt">Rigorous foundations of number theory, group actions, real analysis, and spectral linear algebra paired with formal proofs and algorithms.</p>
-
-        <div class="card-footer-row course-card-footer">
-          <a href="/courses/pure-mathematics/number-theory/modular-arithmetic-and-fermat/" class="btn-studio-primary course-card-start-btn"><i class="bi bi-play-fill"></i> Start Course</a>
-          <a href="/courses/pure-mathematics/" class="card-action-link">Syllabus <i class="bi bi-arrow-up-right"></i></a>
-        </div>
-      </article>
-      <article class="studio-card course-catalog-card" data-domain="Applied Mathematics" data-search="applied mathematics &amp; scientific computing numerical analysis, convex optimization, newton-krylov solvers, and structure-preserving symplectic ode integrators. applied mathematics c · python newton–raphson convergence &amp; convex optimization symplectic integrators &amp; hamiltonian mechanics">
-        <div class="card-meta-line">
-          <span class="meta-type-course">COURSE 03</span>
-          <span class="meta-dot">&middot;</span>
-          <span>Applied Mathematics</span>
-          <span class="meta-dot">&middot;</span>
-          <span>2 Lessons</span>
-        </div>
-
-        <h2 class="card-title"><a href="/courses/applied-scientific-computing/">Applied Mathematics &amp; Scientific Computing</a></h2>
-        <p class="card-excerpt">Numerical analysis, convex optimization, Newton-Krylov solvers, and structure-preserving symplectic ODE integrators.</p>
-
-        <div class="card-footer-row course-card-footer">
-          <a href="/courses/applied-scientific-computing/numerical-analysis/newton-krylov-and-optimization/" class="btn-studio-primary course-card-start-btn"><i class="bi bi-play-fill"></i> Start Course</a>
-          <a href="/courses/applied-scientific-computing/" class="card-action-link">Syllabus <i class="bi bi-arrow-up-right"></i></a>
-        </div>
-      </article>
-    </div>
-
-    <div id="coursesEmptyState" class="library-empty-state d-none">
-      <h3>No matching courses found</h3>
-      <p>Try clearing your search query or switching to "All Tracks".</p>
-      <button type="button" class="btn-studio-secondary" id="coursesEmptyResetBtn">Show All Courses</button>
-    </div>
-  </div>
-</div>
-  </main>
-
-  <footer class="statusbar">
-    <span class="statusbar-left"></span>
-    <span class="statusbar-center">&copy; 2026 Math Code Center. Pure &amp; Applied Mathematics &middot; Lean 4 &middot; Scientific Computing.</span>
-    <span class="statusbar-right"></span>
-  </footer>
-</body>
-</html>
+<!doctype html><html lang=en-us data-bs-theme=dark><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Courses | Quantum Funda</title><meta name=description content="Interactive courses in the mathematics of quantum computing: foundations, quantum computation, quantum algorithms, and quantum optimization."><meta property="og:title" content="Courses"><meta property="og:description" content="Interactive courses in the mathematics of quantum computing: foundations, quantum computation, quantum algorithms, and quantum optimization."><meta property="og:image" content="https://mathcode.org/og.png"><meta property="og:url" content="https://mathcode.org/courses/"><meta property="og:type" content="website"><meta property="og:site_name" content="Quantum Funda"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Courses"><meta name=twitter:description content="Interactive courses in the mathematics of quantum computing: foundations, quantum computation, quantum algorithms, and quantum optimization."><meta name=twitter:image content="https://mathcode.org/og.png"><link rel=icon type=image/png href=/pc.png><script>(function(){try{var e=localStorage.getItem("mathcode-theme")||"dark";document.documentElement.setAttribute("data-bs-theme",e)}catch{document.documentElement.setAttribute("data-bs-theme","dark")}})()</script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=JetBrains+Mono:ital,wght@0,400..700;1,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js></script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js></script><script>window.__APP_CONFIG__={mobileBreakpoint:1279}</script><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js defer></script><link rel=stylesheet href=/css/main.a206b1819e5a8cb23f511f6f20b268432b26f2be6e9a242188f7d12bd720ff44.css integrity="sha256-ogaxgZ5ajLI/UR9vILJoQysm8r5umiQhiPfRK9cg/0Q="><script src=/js/main.4eb1a57ed54ae3f3130a100860049eb0370bf17d027541180bbb548fb42f7a12.js integrity="sha256-TrGlftVK4/MTChAIYASesDcL8X0CdUEYC7tUj7QvehI=" defer></script></head><body class="d-flex flex-column vh-100"><header class=topbar><div class="topbar-zone topbar-left"><button id=sidebarToggleBtn class="topbar-icon-btn d-none" type=button aria-label="Toggle Curriculum Drawer" title="Toggle Sidebar">
+<i class="bi bi-layout-sidebar-inset"></i>
+</button>
+<a href=/ class=brand-link aria-label="Quantum Funda Home"><span class=brand-glyph aria-hidden=true>&Psi;</span>
+<span class=brand-text>Quantum Funda</span></a></div><nav class="topbar-zone topbar-center" id=primaryNav aria-label="Primary Navigation"><a href=/library/ class=topnav-link>Library</a>
+<a href=/courses/ class="topnav-link active">Courses</a>
+<a href=/books/ class=topnav-link>Books</a>
+<a href=/blog/ class=topnav-link>Blog</a></nav><div class="topbar-zone topbar-right"><button id=globalSearchBtn class=topbar-search-trigger type=button aria-label="Quick Search across all courses, books, and articles" title="Quick Search (Ctrl+K or /)">
+<i class="bi bi-search"></i>
+<span class=topbar-search-label>Search...</span>
+<kbd class=topbar-search-kbd>Ctrl K</kbd>
+</button>
+<button id=themeToggleBtn class=topbar-icon-btn type=button aria-label="Toggle dark and light theme" title="Toggle theme (Dark / Light)">
+<i class="bi bi-sun" id=themeToggleIcon></i>
+</button>
+<button id=mobileNavToggleBtn class="topbar-icon-btn d-md-none" type=button aria-label="Toggle Navigation Menu" title=Menu>
+<i class="bi bi-list"></i></button></div></header><nav id=mobileNavDrawer class="mobile-nav-drawer d-none" aria-label="Mobile Navigation"><a href=/library/ class=mobile-nav-link><i class="bi bi-collection"></i> Unified Library</a>
+<a href=/courses/ class="mobile-nav-link active"><i class="bi bi-easel2"></i> Interactive Courses</a>
+<a href=/books/ class=mobile-nav-link><i class="bi bi-journal-bookmark"></i> Quantum Monographs</a>
+<a href=/blog/ class=mobile-nav-link><i class="bi bi-pen"></i> Research Essays & Blog</a></nav><div id=globalSearchModal class="search-modal-backdrop d-none" role=dialog aria-modal=true aria-label="Global Catalog Search"><div class=search-modal-dialog><div class=search-modal-header><i class="bi bi-search search-modal-icon"></i>
+<input type=search id=globalSearchInput class=search-modal-input placeholder="Jump to any course, lesson, book chapter, theorem, or essay..." autocomplete=off>
+<button type=button id=globalSearchCloseBtn class=topbar-icon-btn aria-label="Close search"><i class="bi bi-x-lg"></i></button></div><div class=search-modal-filters role=group aria-label="Filter search results by type"><button type=button class="filter-seg-btn active" data-search-type=all>All</button>
+<button type=button class=filter-seg-btn data-search-type=course>Courses & Lessons</button>
+<button type=button class=filter-seg-btn data-search-type=book>Books & Chapters</button>
+<button type=button class=filter-seg-btn data-search-type=article>Blog Essays</button></div><div id=globalSearchResults class=search-modal-results></div><div class=search-modal-footer><span><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate</span>
+<span><kbd>Enter</kbd> to open</span>
+<span><kbd>Esc</kbd> to close</span></div></div></div><main class="flex-grow-1 overflow-hidden"><div class=studio-scroll-page><div class=studio-container><header class=page-studio-header><div class=studio-eyebrow>STRUCTURED CURRICULUM &#183; LECTURES, FORMAL CODE & QUIZZES</div><h1 class=page-studio-title>Interactive Quantum Mathematics Courses</h1><p class=page-studio-subtitle>Rigorous courses combining quantum mathematical derivations in LaTeX, formal proofs in Lean 4, numerical implementations in Python and C, and interactive self-check quizzes.</p><div class=library-controls-bar id=coursesFilterBar><div class=library-search-wrap><i class="bi bi-search library-search-icon"></i>
+<input type=search id=coursesSearchInput class=library-search-input placeholder="Search courses, modules, theorems, or languages (e.g. Lean 4, Hilbert, Unitary, C)..." autocomplete=off></div><div class=filter-segment-group role=group aria-label="Filter courses by domain"><button type=button class="filter-seg-btn active" data-course-domain=all>All Tracks (3)</button>
+<button type=button class=filter-seg-btn data-course-domain="Quantum Foundations">Foundations</button>
+<button type=button class=filter-seg-btn data-course-domain="Quantum Computation">Computation & Algorithms</button>
+<button type=button class=filter-seg-btn data-course-domain="Quantum Optimization">Optimization</button></div></div><div class=library-status-bar><span id=coursesResultCount>Showing all 3 course tracks</span>
+<button type=button id=coursesResetBtn class="library-reset-link d-none">Reset filters</button></div></header><div class=catalog-grid-3 id=coursesCatalogList><article class="studio-book-card course-catalog-card" data-domain="Quantum Foundations" data-search="mathematical foundations of quantum computing hilbert spaces, tensor products, dirac notation, spectral theory, and the linear-algebraic foundations of qubits and density operators."><a href=/courses/quantum-foundations/ class=book-cover-link><img src=/images/course_pure_mathematics.jpg alt="Mathematical Foundations of Quantum Computing" class=book-cover-img loading=lazy referrerpolicy=no-referrer></a><div class=book-card-body><div class=card-meta-line><span class=meta-type-course>COURSE 01</span>
+<span class=meta-dot>&#183;</span>
+<span>Quantum Foundations</span>
+<span class=meta-dot>&#183;</span>
+<span>2 Lessons</span></div><h2 class=card-title><a href=/courses/quantum-foundations/>Mathematical Foundations of Quantum Computing</a></h2><p class=card-excerpt>Hilbert spaces, tensor products, Dirac notation, spectral theory, and the linear-algebraic foundations of qubits and density operators.</p><div class="card-footer-row course-card-footer"><a href=/courses/quantum-foundations/hilbert-spaces/hilbert-spaces-and-qubits/ class="btn-studio-primary course-card-start-btn"><i class="bi bi-play-fill"></i> Start Course
+</a><a href=/courses/quantum-foundations/ class=card-action-link>Syllabus <i class="bi bi-arrow-up-right"></i></a></div></div></article><article class="studio-book-card course-catalog-card" data-domain="Quantum Computation" data-search="quantum computation & quantum algorithms quantum circuits, unitary gate composition, quantum phase estimation, grover amplitude amplification, and the mathematics of quantum speedup."><a href=/courses/quantum-computation/ class=book-cover-link><img src=/images/course_applied_computing.jpg alt="Quantum Computation & Quantum Algorithms" class=book-cover-img loading=lazy referrerpolicy=no-referrer></a><div class=book-card-body><div class=card-meta-line><span class=meta-type-course>COURSE 02</span>
+<span class=meta-dot>&#183;</span>
+<span>Quantum Computation</span>
+<span class=meta-dot>&#183;</span>
+<span>2 Lessons</span></div><h2 class=card-title><a href=/courses/quantum-computation/>Quantum Computation & Quantum Algorithms</a></h2><p class=card-excerpt>Quantum circuits, unitary gate composition, quantum phase estimation, Grover amplitude amplification, and the mathematics of quantum speedup.</p><div class="card-footer-row course-card-footer"><a href=/courses/quantum-computation/circuits/quantum-gates-and-unitary-circuits/ class="btn-studio-primary course-card-start-btn"><i class="bi bi-play-fill"></i> Start Course
+</a><a href=/courses/quantum-computation/ class=card-action-link>Syllabus <i class="bi bi-arrow-up-right"></i></a></div></div></article><article class="studio-book-card course-catalog-card" data-domain="Quantum Optimization" data-search="quantum optimization & variational algorithms qaoa, variational quantum eigensolvers, hamiltonian engineering, adiabatic quantum computation, and the landscape mathematics of quantum optimization."><a href=/courses/quantum-optimization/ class=book-cover-link><img src=/images/course_lean4_proofs.jpg alt="Quantum Optimization & Variational Algorithms" class=book-cover-img loading=lazy referrerpolicy=no-referrer></a><div class=book-card-body><div class=card-meta-line><span class=meta-type-course>COURSE 03</span>
+<span class=meta-dot>&#183;</span>
+<span>Quantum Optimization</span>
+<span class=meta-dot>&#183;</span>
+<span>2 Lessons</span></div><h2 class=card-title><a href=/courses/quantum-optimization/>Quantum Optimization & Variational Algorithms</a></h2><p class=card-excerpt>QAOA, variational quantum eigensolvers, Hamiltonian engineering, adiabatic quantum computation, and the landscape mathematics of quantum optimization.</p><div class="card-footer-row course-card-footer"><a href=/courses/quantum-optimization/qaoa/qaoa-and-maxcut/ class="btn-studio-primary course-card-start-btn"><i class="bi bi-play-fill"></i> Start Course
+</a><a href=/courses/quantum-optimization/ class=card-action-link>Syllabus <i class="bi bi-arrow-up-right"></i></a></div></div></article></div><div id=coursesEmptyState class="library-empty-state d-none"><h3>No matching courses found</h3><p>Try clearing your search query or switching to "All Tracks".</p><button type=button class=btn-studio-secondary id=coursesEmptyResetBtn>Show All Courses</button></div></div></div></main><footer class=statusbar><span class=statusbar-left></span>
+<span class=statusbar-center>&copy; 2026 Quantum Funda. Quantum Foundations &#183; Quantum Computation &#183; Quantum Algorithms &#183; Quantum Optimization.</span>
+<span class=statusbar-right></span></footer></body></html>

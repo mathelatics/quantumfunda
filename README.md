@@ -1,6 +1,6 @@
-# Quantum Funda 
+# Quantum Funda
 
-**Math Code Center** is an ultra-lightweight, 100% static academic platform for pure and applied mathematics, formal theorem proving in **Lean 4**, and scientific computing in **Python**, **C**, and **Rust**.
+**Quantum Funda** is an ultra-lightweight, 100% static academic platform for the mathematics of quantum computing: mathematical foundations of quantum computing, quantum computation, quantum algorithms, and quantum optimization.
 
 Designed for zero-backend deployment on **GitHub Pages** and **GitLab Pages**, all interactive features—including KaTeX math rendering, Lean 4 / multi-language syntax highlighting, Global Quick Search (`Ctrl+K`), automatic "On This Page" section outlines, and interactive self-check quizzes—run instantaneously in the browser.
 
@@ -11,8 +11,8 @@ Note
 
 - **Global Quick-Jump Search (`Ctrl+K` or `/`)**: Instant command palette in the top navigation bar to jump to any course, lesson, book, chapter, or essay across the platform.
 - **Unified Library (`/library/`)**: Searchable and filterable catalog across all courses, lessons, multi-chapter books, and research essays.
-- **Interactive Courses (`/courses/`)**: Browse the full Courses Catalog with domain filters and syllabus previews, or enter the Course Studio featuring collapsible curriculum trees, Lecture & Proofs, Reading & Code switchers, interactive quizzes with step-by-step proof explanations, and Previous/Next lesson navigation.
-- **Mathematical Monographs (`/books/`)**: Multi-chapter academic books with a persistent chapter sidebar, automatic "On This Page" section outline, and Previous/Next chapter cards.
+- **Interactive Courses (`/courses/`)**: Browse the full Courses Catalog with domain filters and syllabus previews, or enter the Course Studio featuring collapsible curriculum trees, Lecture & Proofs, Reading & Code switchers, interactive quizzes with step-by-step proofs, and Previous/Next lesson navigation.
+- **Quantum Monographs (`/books/`)**: Multi-chapter academic books with a persistent chapter sidebar, automatic "On This Page" section outline, and Previous/Next chapter cards.
 - **Research Essays (`/blog/`)**: Long-form technical articles with native inline (`$...$`) and display (`$$...$$`) LaTeX rendering, automatic section outlines, and Previous/Next essay navigation.
 
 ---
@@ -23,16 +23,16 @@ You can scaffold new content in seconds using the built-in generator commands (o
 
 ```bash
 # Create a new blog essay in content/blog/
-npm run new:article -- "Title of Your Mathematical Essay"
+npm run new:article -- "Title of Your Quantum Mathematics Essay"
 
 # Create a new multi-chapter book in content/books/
-npm run new:book -- "Title of Your Monograph"
+npm run new:book -- "Title of Your Quantum Monograph"
 
 # Add a new chapter to an existing book
 npm run new:chapter -- <book-slug> "Title of New Chapter"
 
 # Create a new course in content/courses/
-npm run new:course -- "Title of Your Course"
+npm run new:course -- "Title of Your Quantum Course"
 
 # Add a new lesson to an existing course
 npm run new:lesson -- <course-slug> "Title of New Lesson"

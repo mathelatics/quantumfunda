@@ -45,5 +45,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, HOST, () => {
-  console.log(`Math Code Center static preview server listening on http://${HOST}:${PORT}`);
+  console.log(`Quantum Funda static preview server listening on http://${HOST}:${PORT}`);
 });

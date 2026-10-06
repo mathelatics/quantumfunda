@@ -1,7 +1,7 @@
 +++
 title = 'Courses'
-description = 'Interactive courses in formal theorem proving with Lean 4, pure mathematics, and applied scientific computing.'
+description = 'Interactive courses in the mathematics of quantum computing: foundations, quantum computation, quantum algorithms, and quantum optimization.'
 date = '2026-10-04'
 +++
 
-Explore structured courses combining rigorous mathematical exposition, machine-checked Lean 4 proofs, and multi-language computational labs.
+Explore structured courses combining rigorous quantum mathematical exposition, machine-checked proofs, and computational labs in Python and Lean 4.

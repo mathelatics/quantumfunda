@@ -1,4 +1,4 @@
-name: Deploy Math Code Center to GitHub Pages
+name: Deploy Quantum Funda to GitHub Pages
 
 on:
   push:

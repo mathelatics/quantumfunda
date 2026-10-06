@@ -1,5 +1,5 @@
 {
-  "name": "Math Code Center",
-  "description": "A platform for pure and applied mathematics, formal proofs in Lean 4, and scientific computing.",
+  "name": "Quantum Funda",
+  "description": "A platform for the mathematics of quantum computing: mathematical foundations, quantum computation, quantum algorithms, and quantum optimization.",
   "requestFramePermissions": []
 }

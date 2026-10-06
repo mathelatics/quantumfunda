@@ -1,0 +1,80 @@
+<!doctype html><html lang=en-us data-bs-theme=dark><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Adiabatic Quantum Computing & Trotter–Suzuki Simulation | Quantum Funda</title><meta name=description content="The adiabatic theorem, minimum spectral gaps, QUBO-to-Ising embeddings, and first-/second-order product formulas for Hamiltonian simulation."><meta property="og:title" content="Adiabatic Quantum Computing & Trotter–Suzuki Simulation"><meta property="og:description" content="The adiabatic theorem, minimum spectral gaps, QUBO-to-Ising embeddings, and first-/second-order product formulas for Hamiltonian simulation."><meta property="og:image" content="https://mathcode.org/og.png"><meta property="og:url" content="https://mathcode.org/courses/quantum-optimization/adiabatic/adiabatic-troter-suzuki/"><meta property="og:type" content="article"><meta property="og:site_name" content="Quantum Funda"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Adiabatic Quantum Computing & Trotter–Suzuki Simulation"><meta name=twitter:description content="The adiabatic theorem, minimum spectral gaps, QUBO-to-Ising embeddings, and first-/second-order product formulas for Hamiltonian simulation."><meta name=twitter:image content="https://mathcode.org/og.png"><link rel=icon type=image/png href=/pc.png><script>(function(){try{var e=localStorage.getItem("mathcode-theme")||"dark";document.documentElement.setAttribute("data-bs-theme",e)}catch{document.documentElement.setAttribute("data-bs-theme","dark")}})()</script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=JetBrains+Mono:ital,wght@0,400..700;1,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js></script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js></script><script>window.__APP_CONFIG__={mobileBreakpoint:1279}</script><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js defer></script><link rel=stylesheet href=/css/main.a206b1819e5a8cb23f511f6f20b268432b26f2be6e9a242188f7d12bd720ff44.css integrity="sha256-ogaxgZ5ajLI/UR9vILJoQysm8r5umiQhiPfRK9cg/0Q="><script src=/js/main.4eb1a57ed54ae3f3130a100860049eb0370bf17d027541180bbb548fb42f7a12.js integrity="sha256-TrGlftVK4/MTChAIYASesDcL8X0CdUEYC7tUj7QvehI=" defer></script></head><body class="d-flex flex-column vh-100"><header class=topbar><div class="topbar-zone topbar-left"><button id=sidebarToggleBtn class="topbar-icon-btn d-none" type=button aria-label="Toggle Curriculum Drawer" title="Toggle Sidebar">
+<i class="bi bi-layout-sidebar-inset"></i>
+</button>
+<a href=/ class=brand-link aria-label="Quantum Funda Home"><span class=brand-glyph aria-hidden=true>&Psi;</span>
+<span class=brand-text>Quantum Funda</span></a></div><nav class="topbar-zone topbar-center" id=primaryNav aria-label="Primary Navigation"><a href=/library/ class=topnav-link>Library</a>
+<a href=/courses/ class="topnav-link active">Courses</a>
+<a href=/books/ class=topnav-link>Books</a>
+<a href=/blog/ class=topnav-link>Blog</a></nav><div class="topbar-zone topbar-right"><button id=globalSearchBtn class=topbar-search-trigger type=button aria-label="Quick Search across all courses, books, and articles" title="Quick Search (Ctrl+K or /)">
+<i class="bi bi-search"></i>
+<span class=topbar-search-label>Search...</span>
+<kbd class=topbar-search-kbd>Ctrl K</kbd>
+</button>
+<button id=themeToggleBtn class=topbar-icon-btn type=button aria-label="Toggle dark and light theme" title="Toggle theme (Dark / Light)">
+<i class="bi bi-sun" id=themeToggleIcon></i>
+</button>
+<button id=mobileNavToggleBtn class="topbar-icon-btn d-md-none" type=button aria-label="Toggle Navigation Menu" title=Menu>
+<i class="bi bi-list"></i></button></div></header><nav id=mobileNavDrawer class="mobile-nav-drawer d-none" aria-label="Mobile Navigation"><a href=/library/ class=mobile-nav-link><i class="bi bi-collection"></i> Unified Library</a>
+<a href=/courses/ class="mobile-nav-link active"><i class="bi bi-easel2"></i> Interactive Courses</a>
+<a href=/books/ class=mobile-nav-link><i class="bi bi-journal-bookmark"></i> Quantum Monographs</a>
+<a href=/blog/ class=mobile-nav-link><i class="bi bi-pen"></i> Research Essays & Blog</a></nav><div id=globalSearchModal class="search-modal-backdrop d-none" role=dialog aria-modal=true aria-label="Global Catalog Search"><div class=search-modal-dialog><div class=search-modal-header><i class="bi bi-search search-modal-icon"></i>
+<input type=search id=globalSearchInput class=search-modal-input placeholder="Jump to any course, lesson, book chapter, theorem, or essay..." autocomplete=off>
+<button type=button id=globalSearchCloseBtn class=topbar-icon-btn aria-label="Close search"><i class="bi bi-x-lg"></i></button></div><div class=search-modal-filters role=group aria-label="Filter search results by type"><button type=button class="filter-seg-btn active" data-search-type=all>All</button>
+<button type=button class=filter-seg-btn data-search-type=course>Courses & Lessons</button>
+<button type=button class=filter-seg-btn data-search-type=book>Books & Chapters</button>
+<button type=button class=filter-seg-btn data-search-type=article>Blog Essays</button></div><div id=globalSearchResults class=search-modal-results></div><div class=search-modal-footer><span><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate</span>
+<span><kbd>Enter</kbd> to open</span>
+<span><kbd>Esc</kbd> to close</span></div></div></div><main class="flex-grow-1 overflow-hidden"><div class=platform-layout id=platformLayout><aside class="platform-pane sidebar-pane" id=sidebarPane><div class=book-sidebar-header><a href=/courses/ class=book-sidebar-back><i class="bi bi-arrow-left"></i> All Courses</a><h2 class=book-sidebar-title><a href=/courses/quantum-optimization/>Quantum Optimization & Variational Algorithms</a></h2><div class=card-meta-line>Quantum Optimization &#183; 2 Lessons</div></div><div class="p-2 border-bottom"><input type=search id=questionSearch class="form-control form-control-sm" placeholder="Filter lessons in this course..." autocomplete=off></div><nav class="book-sidebar-toc overflow-auto" id=questionList aria-label="Course Curriculum"><a href=/courses/quantum-optimization/ class=book-toc-item><span class=toc-item-num>00 &#183; Syllabus</span>
+<span class=toc-item-text>Course Overview & Syllabus</span>
+</a><a href=/courses/quantum-optimization/qaoa/qaoa-and-maxcut/ class="book-toc-item sidebar-lesson-link" data-lesson-id=qaoa-and-maxcut data-search="qaoa & the maxcut ising hamiltonian python"><span class=toc-item-num>Lesson 01 &#183; PYTHON</span>
+<span class=toc-item-text>QAOA & the MaxCut Ising Hamiltonian</span>
+</a><a href=/courses/quantum-optimization/adiabatic/adiabatic-troter-suzuki/ class="book-toc-item sidebar-lesson-link active" data-lesson-id=adiabatic-troter-suzuki data-search="adiabatic quantum computing & trotter–suzuki simulation python"><span class=toc-item-num>Lesson 02 &#183; PYTHON</span>
+<span class=toc-item-text>Adiabatic Quantum Computing & Trotter–Suzuki Simulation</span></a></nav></aside><section class="platform-pane question-pane" id=questionPane><div class="pane-header border-bottom d-flex align-items-center justify-content-between px-3"><div class="d-flex align-items-center gap-2 overflow-hidden"><button id=sidebarCollapseBtn class=topbar-icon-btn type=button title="Toggle Course Sidebar" aria-label="Toggle Course Sidebar">
+<i class="bi bi-layout-sidebar"></i></button><nav class="studio-breadcrumb mb-0 text-truncate" aria-label="Course Breadcrumb"><a href=/library/>Library</a>
+<span>/</span>
+<a href=/courses/>Courses</a>
+<span>/</span>
+<a href=/courses/quantum-optimization/>Quantum Optimization & Variational Algorithms</a>
+<span>/</span>
+<span class=current>Adiabatic Quantum Computing & Trotter–Suzuki Simulation</span></nav></div></div><div class=center-tabs id=centerTabs><button type=button class="center-tab active" id=tabAll data-tab-target=all>
+<i class="bi bi-layers me-1"></i> Full Lesson
+</button>
+<button type=button class=center-tab id=tabArticle data-tab-target=lecture>
+<i class="bi bi-journal-richtext me-1"></i> Lecture & Proofs
+</button>
+<button type=button class=center-tab id=tabReading data-tab-target=reading>
+<i class="bi bi-file-earmark-code me-1"></i> Reading & Code</button></div><div class="question-pane-body overflow-auto" id=questionPaneBody><div class=course-reader-prose><header class=chapter-header><div class=card-meta-line><span class=meta-type-course>INTERACTIVE LESSON</span>
+<span class=meta-dot>&#183;</span>
+<span>PYTHON</span>
+<span class=meta-dot>&#183;</span>
+<span>HARD</span></div><h1 class=chapter-title>Adiabatic Quantum Computing & Trotter–Suzuki Simulation</h1><p class=chapter-lead>The adiabatic theorem, minimum spectral gaps, QUBO-to-Ising embeddings, and first-/second-order product formulas for Hamiltonian simulation.</p></header><div id=autoPageToc class="page-toc-box d-none"></div><div id=lectureTabPane class="lesson-section-pane academic-prose markdown-body"><h2 id=spectral-gaps-and-computational-complexity>Spectral Gaps and Computational Complexity</h2><p>The adiabatic schedule&rsquo;s runtime is dominated by the <strong>minimum instantaneous gap</strong> $g_{\min}$. For unstructured search of $N$ items, naive linear interpolation gives $g_{\min} \sim 1/\sqrt{N}$ and hence $T \sim N$; an optimized <strong>Roland–Cerf local schedule</strong> $s(t)$ with $ds/dt \propto g(s)^2 / \|\partial_s H\|$ recovers $T = \mathcal{O}(\sqrt{N})$, matching Grover.</p><p>For digital simulation, the <strong>first-order Lie–Trotter formula</strong></p>$$e^{-i(A + B)\tau} = e^{-iA\tau} e^{-iB\tau} + \mathcal{O}(\tau^2)$$<p>and the <strong>second-order Strang splitting</strong> $e^{-iA\tau/2} e^{-iB\tau} e^{-iA\tau/2} = e^{-i(A+B)\tau} + \mathcal{O}(\tau^3)$ trade per-step error against the number of digitized steps $r = T/\tau$. For $k$-sparse Hamiltonians the Taylorization/LCU construction achieves gate complexity $\tilde{\mathcal{O}}(\|H\|_{\max} T)$, exponentially improving on naive Trotter bounds in $1/\epsilon$.</p></div><div id=readingTabPane class="lesson-section-pane academic-prose markdown-body mt-4 pt-3 border-top"><h2 id=second-order-strang-splitting-simulation>Second-Order Strang Splitting Simulation</h2><div class=code-block data-lang=python><div class=code-block-header><span class=code-lang-label>Python</span>
+<button class=code-copy-btn onclick='navigator.clipboard.writeText(this.closest(".code-block").querySelector("code").textContent).then(()=>{this.textContent="Copied!",setTimeout(()=>{this.textContent="Copy"},1500)})'>Copy</button></div><div class=code-block-body><div class=code-line-numbers aria-hidden=true><span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>5</span>
+<span>6</span>
+<span>7</span>
+<span>8</span>
+<span>9</span>
+<span>10</span>
+<span>11</span>
+<span>12</span></div><pre><code class=language-python>import numpy as np
+from scipy.linalg import expm
+
+def strang_evolve(HI: np.ndarray, HP: np.ndarray, T: float, steps: int, psi0: np.ndarray) -&gt; np.ndarray:
+    dt = T / steps
+    psi = psi0.copy()
+    for k in range(steps):
+        s = (k &#43; 0.5) / steps
+        HI_w = (1 - s) * HI
+        HP_w = s * HP
+        psi = expm(-1j * HI_w * dt / 2) @ expm(-1j * HP_w * dt) @ expm(-1j * HI_w * dt / 2) @ psi
+    return psi</code></pre></div></div><div class=code-block data-lang=python><div class=code-block-header><span class=code-lang-label>Python</span>
+<button class=code-copy-btn onclick='navigator.clipboard.writeText(this.closest(".code-block").querySelector("code").textContent).then(()=>{this.textContent="Copied!",setTimeout(()=>{this.textContent="Copy"},1500)})'>Copy</button></div><div class=code-block-body><div class=code-line-numbers aria-hidden=true><span>1</span>
+<span>2</span>
+<span>3</span></div><pre><code class=language-python>def trotter_step(HI: np.ndarray, HP: np.ndarray, s: float, dt: float) -&gt; np.ndarray:
+    from scipy.linalg import expm
+    return expm(-1j * (1 - s) * HI * dt) @ expm(-1j * s * HP * dt)</code></pre></div></div></div></div></div></section></div></main><footer class=statusbar><span class=statusbar-left></span>
+<span class=statusbar-center>&copy; 2026 Quantum Funda. Quantum Foundations &#183; Quantum Computation &#183; Quantum Algorithms &#183; Quantum Optimization.</span>
+<span class=statusbar-right></span></footer></body></html>

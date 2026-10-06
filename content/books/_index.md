@@ -1,5 +1,5 @@
 +++
 title = 'Books & Monographs'
-description = 'Open-access mathematical monographs and computational textbooks on Lean 4 theorem proving, spectral linear algebra, and functional analysis.'
+description = 'Open-access monographs on the mathematics of quantum computing: quantum linear algebra, functional analysis for quantum theory, and formalization in Lean 4.'
 date = '2026-10-04'
 +++

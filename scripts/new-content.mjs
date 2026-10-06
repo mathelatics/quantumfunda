@@ -21,7 +21,7 @@ const kind = (args[0] || '').toLowerCase();
 
 function printUsage() {
   console.log(`
-Math Code Center — Content Generator
+Quantum Funda — Content Generator
 
 Usage:
   npm run new:article -- "Title of Your Article"
@@ -38,13 +38,13 @@ if (!kind) {
 }
 
 if (kind === 'article' || kind === 'blog') {
-  const title = args.slice(1).join(' ').trim() || 'New Mathematical Essay';
+  const title = args.slice(1).join(' ').trim() || 'New Quantum Mathematics Essay';
   const slug = toSlug(title);
   const target = path.join(CONTENT_DIR, 'blog', `${slug}.md`);
   const content = `+++
 title = '${title.replace(/'/g, '')}'
 date = '${today}'
-domain = 'Pure Math'
+domain = 'Quantum Foundations'
 description = 'Concise summary of the theorem, mathematical exposition, and formal code.'
 +++
 
@@ -66,7 +66,7 @@ theorem example_refl (a : Nat) : a = a := by
   fs.writeFileSync(target, content, 'utf8');
   console.log(`Created blog essay: content/blog/${slug}.md`);
 } else if (kind === 'book') {
-  const title = args.slice(1).join(' ').trim() || 'New Mathematical Monograph';
+  const title = args.slice(1).join(' ').trim() || 'New Quantum Monograph';
   const slug = toSlug(title);
   const bookDir = path.join(CONTENT_DIR, 'books', slug);
   fs.mkdirSync(bookDir, { recursive: true });
@@ -74,8 +74,8 @@ theorem example_refl (a : Nat) : a = a := by
   const indexContent = `+++
 title = '${title.replace(/'/g, '')}'
 subtitle = 'Foundations, Theorems, and Computational Implementations'
-author = 'Math Code Center Press'
-domain = 'Pure Math'
+author = 'Quantum Funda Press'
+domain = 'Quantum Foundations'
 level = 'Advanced Undergraduate'
 weight = 10
 cover = '/images/book_lean4_proofs.jpg'
@@ -137,14 +137,14 @@ Write your chapter exposition with $\\LaTeX$ and fenced code blocks.
   fs.writeFileSync(path.join(bookDir, `${chSlug}.md`), chContent, 'utf8');
   console.log(`Created book chapter: content/books/${bookSlug}/${chSlug}.md`);
 } else if (kind === 'course') {
-  const title = args.slice(1).join(' ').trim() || 'New Mathematics & Code Course';
+  const title = args.slice(1).join(' ').trim() || 'New Quantum Course';
   const slug = toSlug(title);
   const courseDir = path.join(CONTENT_DIR, 'courses', slug);
   fs.mkdirSync(path.join(courseDir, 'foundations'), { recursive: true });
 
   const indexContent = `+++
 title = '${title.replace(/'/g, '')}'
-domain = 'Formal Proofs & Lean 4'
+domain = 'Quantum Computation'
 level = 'Undergraduate to Graduate'
 weight = 10
 description = 'Structured course combining mathematical lectures, code implementations, and interactive quizzes.'
