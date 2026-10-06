@@ -1,4 +1,4 @@
-# Math Code Center
+# Quantum Funda 
 
 **Math Code Center** is an ultra-lightweight, 100% static academic platform for pure and applied mathematics, formal theorem proving in **Lean 4**, and scientific computing in **Python**, **C**, and **Rust**.
 
